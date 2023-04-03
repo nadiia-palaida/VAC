@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol viewBox="0 0 13 24" id="carousel-arrow-left"  fill="none">
+        <path d="M12 23L1 12L12 0.999985" stroke="#7481FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol viewBox="0 0 13 24" id="carousel-arrow-right"  fill="none">
+        <path d="M12 23L1 12L12 0.999985" stroke="#7481FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+</svg>
+

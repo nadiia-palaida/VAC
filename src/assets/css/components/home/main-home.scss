@@ -1,0 +1,71 @@
+.section-main {
+  padding-top: 120px;
+  padding-bottom: 184px;
+  background: url("@/assets/imgs/home/main-screen/Background.svg") right no-repeat, $primary-accent;
+  background-size: cover;
+}
+
+.main__content {
+  display: flex;
+  align-items: center;
+  grid-gap: 66px;
+}
+
+.main__column {
+  max-width: 50%;
+}
+
+.main__title {
+  margin-bottom: 60px;
+}
+
+.main__carousel {
+  position: relative;
+}
+
+.main__carousel-slide-content {
+  display: flex;
+  justify-content: center;
+}
+
+.main__carousel-img {
+  max-width: 80%;
+}
+
+.main__carousel-navigation-btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  height: 53px;
+  width: 53px;
+  background: $text-light;
+  opacity: 0.8;
+  border-radius: 50%;
+  z-index: 25;
+  cursor: pointer;
+}
+
+.main__carousel-btn-next {
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+
+.main__carousel-navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.main__carousel-btn-next-img {
+  transform: translateX(25%) rotate(180deg);
+}
+
+.main__carousel-btn-prev-img {
+  transform: translateX(-25%)
+}

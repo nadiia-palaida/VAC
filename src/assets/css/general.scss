@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Gilroy Regular", sans-serif;
+  font-size: 16px;
+}
+
+@media (min-width: 321px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 577px) {
+  .container {
+    max-width: 560px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 993px) {
+  .container {
+    max-width: 912px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.btn {
+  height: 45px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gilroy Bold", sans-serif;
+  text-transform: uppercase;
+  border-radius: 2px;
+  min-width: 200px;
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+}
+
+.btn_solid {
+  background: $primary-accent;
+  color: $text-light;
+
+  &:hover {
+    background-color: $hover-primary;
+  }
+}
+
+.btn_liner {
+  background: $text-light;
+  color: $primary-accent;
+
+  &:hover {
+    border-color: $hover-primary;
+  }
+}
+
+.btn_bordered {
+  border: 1px solid $primary-accent;
+}
+
+.btn_width {
+  max-width: 200px;
+}
+
+.title {
+  font-family: "Gilroy ExtraBold", sans-serif;
+  font-size: 60px;
+  color: $text-light;
+}
+
+@media screen and (max-width: 768px) {
+  .btn  {
+    height: 35px;
+  }
+}
