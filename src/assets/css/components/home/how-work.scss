@@ -1,0 +1,53 @@
+.section-how-work {
+  background: left top 190px / 25% url("@/assets/imgs/home/how-work/Honda_Accord.png") no-repeat, right top 26px / 25% url("@/assets/imgs/home/how-work/Lexus.png") no-repeat;
+  padding-bottom: 230px;
+}
+
+.how-work__content {
+  display: flex;
+  justify-content: center;
+}
+
+.how-work__description {
+  max-width: 605px;
+  padding: 60px;
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background: #fff;
+  transform: translateY(-50px);
+  text-align: center;
+}
+
+.how-work__subtitle {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .section-how-work {
+    padding-bottom: 320px;
+    background: left top 325px / 35% url("@/assets/imgs/home/how-work/Honda_Accord.png") no-repeat, right -20% top 160px / 40% url("@/assets/imgs/home/how-work/Lexus.png") no-repeat;
+  }
+
+  .how-work__description {
+    max-width: 565px;
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .section-how-work {
+    padding-bottom: 215px;
+    background: left top 366px / 55% url("@/assets/imgs/home/how-work/Honda_Accord.png") no-repeat, right -20% top 260px / 55% url("@/assets/imgs/home/how-work/Lexus.png") no-repeat;
+  }
+
+  .how-work__description {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .how-work__subtitle {
+    max-width: 75%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}

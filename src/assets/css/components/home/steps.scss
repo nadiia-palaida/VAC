@@ -1,0 +1,150 @@
+.section-steps {
+  padding-bottom: 115px;
+}
+
+.steps__info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 107px;
+  align-items: center;
+}
+
+.steps__title {
+  max-width: 75%;
+  margin-bottom: 60px;
+}
+
+.steps__list-item-number-icon {
+  width: 75px;
+  height: 67px;
+}
+
+.steps__imgs {
+  display: flex;
+}
+
+.steps__img-phone {
+  max-height: 511px;
+  filter: drop-shadow(0px 20px 25px rgba(0, 0, 0, 0.1));
+}
+
+.steps__list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;}
+}
+
+.steps__list-item-number {
+  position: relative;
+  font-family: "Gilroy Bold", sans-serif;
+  font-size: 25px;
+  margin-right: 20px;
+  letter-spacing: 0.02em;
+  line-height: 140%;
+}
+
+.steps__list-item-number-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.steps__list-item__title {
+  margin-bottom: 5px;
+}
+
+.steps__img-phone-right {
+  transform: translate(-15%, -1%) rotate(-15deg);
+}
+
+@media screen and (max-width: 991px) {
+  .section-steps {
+    padding-bottom: 80px;
+  }
+
+  .steps__title {
+    max-width: 100%;
+  }
+
+  .steps__info {
+    grid-template-columns: 12fr 7fr;
+    grid-gap: 0 54.6px;
+  }
+
+  .steps__imgs {
+    flex-direction: column;
+  }
+
+  .steps__img-phone {
+    position: relative;
+    transform: rotate(15deg);
+
+    img {
+      max-height: 332px;
+    }
+  }
+
+  .steps__img-phone-left {
+    top: 35px;
+  }
+
+  .steps__img-phone-right {
+    bottom: 35px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section-steps {
+    padding-bottom: 45px;
+  }
+
+  .steps__info {
+    grid-template-columns: 1fr;
+  }
+
+  .steps__title {
+    margin-bottom: 30px;
+  }
+
+  .steps__list-item-number-icon {
+    width: 47px;
+    height: 53px;
+  }
+
+  .steps__list-item-number {
+    font-size: 20px;
+  }
+
+  .steps__list-item {
+    margin-bottom: 20px;
+  }
+
+  .steps__list {
+    margin-bottom: 50px;
+  }
+
+  .steps__imgs {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .steps__img-phone {
+    img {
+      max-height: 298px;
+    }
+  }
+
+  .steps__img-phone-left {
+    top: 0px;
+    transform: rotate(0);
+  }
+
+  .steps__img-phone-right {
+    top: 0;
+    transform: translate(-15%, -1%) rotate(-15deg);
+  }
+}
