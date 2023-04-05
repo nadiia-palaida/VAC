@@ -1,0 +1,124 @@
+.reviews__title {
+  margin-bottom: 60px;
+}
+
+.reviews__carousel {
+  position: relative;
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+.reviews__carousel-swiper {
+  height: 322px;
+}
+
+.reviews__carousel-swiper-slide {
+  border-radius: 5px;
+  height: 100%;
+}
+
+.reviews__carousel-slide-content {
+  //display: grid;
+  //grid-template-columns: 5fr 8fr;
+
+  display: flex;
+  height: 100%;
+}
+
+.reviews__description {
+  max-width: 60%;
+  padding: 54px 60px 56px 39px;
+}
+
+.reviews__carousel-img {
+  max-width: 40%;
+  object-fit: cover;
+}
+/*.reviews__carousel-img-wrapper {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.reviews__carousel-img-wrap {
+  padding-top: 69.7%;
+  position: relative;
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+.reviews__carousel-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}*/
+
+
+.reviews__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7; /* start showing ellipsis when 3rd line is reached */
+  white-space: pre-wrap;
+}
+
+.reviews__name {
+  color: $secondary-text;
+  margin-bottom: 11px;
+}
+
+@media screen and (max-width: 991px) {
+  .reviews__carousel-swiper {
+    height: 320px;
+  }
+
+  .reviews__description {
+    padding: 40px 60px 40px 40px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .reviews__carousel-swiper {
+    height: 520px;
+  }
+
+  .reviews__carousel-slide-content {
+    flex-direction: column;
+  }
+
+  .reviews__carousel-img {
+    max-width: 100%;
+    max-height: 215px;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .reviews__carousel-btn-prev, .reviews__carousel-btn-next {
+    top: 90px;
+    transform: unset;
+  }
+
+  .reviews__carousel-btn-next {
+    transform: translateX(-100%);
+  }
+
+  .reviews__description {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .reviews__text {
+    -webkit-line-clamp: 9;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .reviews__carousel-img {
+    object-fit: cover;
+  }
+}

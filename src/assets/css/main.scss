@@ -2,8 +2,17 @@
 @import "variables";
 @import "general";
 
+@import "plugins/swiper";
+
 @import "components/header";
+@import "components/reviews";
+@import "components/tabs";
+@import "components/calculator";
+@import "components/calculator-section";
+
 @import "components/home/main-home";
 @import "components/home/how-work";
 @import "components/home/steps";
 @import "components/home/advantages";
+@import "components/home/choose-vehicle";
+@import "components/home/happy-customers";

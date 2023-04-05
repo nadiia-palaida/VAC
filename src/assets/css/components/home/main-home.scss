@@ -63,10 +63,12 @@
 }
 
 .main__carousel-btn-next-img {
+  color: $primary-accent;
   transform: translateX(25%) rotate(180deg);
 }
 
 .main__carousel-btn-prev-img {
+  color: $primary-accent;
   transform: translateX(-25%)
 }
 

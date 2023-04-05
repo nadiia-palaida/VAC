@@ -160,9 +160,13 @@ body {
   display: block;
 }
 
-@media screen and (max-width: 991px) {
-  .title {
+.section {
+  padding: 110px 0;
+}
 
+@media screen and (max-width: 991px) {
+  .section {
+    padding: 80px 0;
   }
 }
 
@@ -186,5 +190,9 @@ body {
 
   .subtitle {
     font-size: 24px;
+  }
+
+  .section {
+    padding: 40px 0;
   }
 }

@@ -1,0 +1,25 @@
+.tabs__list {
+  height: 50px;
+  display: inline-flex;
+  border: 1px solid $primary-accent;
+  border-radius: 2px;
+}
+
+.tabs__list-item {
+  border-right: 1px solid $primary-accent;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.tabs__button {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 19px;
+  font-family: "Gilroy Bold", sans-serif;
+  font-size: 16px;
+  color: $primary-accent;
+  text-transform: uppercase;
+}
