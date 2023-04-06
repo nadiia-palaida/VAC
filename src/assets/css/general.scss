@@ -25,6 +25,7 @@ button {
   background: none;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 img {
@@ -37,6 +38,7 @@ body {
   font-size: 16px;
   color: $primary-content;
 }
+
 
 @media (min-width: 320px) {
   .container {

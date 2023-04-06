@@ -1,0 +1,164 @@
+.calculator {
+  display: grid;
+  grid-template-columns: 8fr 3.75fr;
+  grid-gap: 0 30px;
+}
+
+.calculator__block {
+  padding: 60px;
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background: #fff;
+}
+
+.calculator__type__tabs {
+  margin-bottom: 55px;
+}
+
+.calculator__ranges-item {
+  margin-bottom: 65px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.calculator__ranges-item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calculator__ranges-item-value {
+  font-family: "Gilroy Bold", sans-serif;
+}
+
+.calculator__ranges-item-value-text {
+  font-family: "Gilroy Bold", sans-serif;
+  font-size: 16px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $secondary-text;
+}
+
+.calculator__payments {
+  margin-bottom: 40px;
+}
+
+.calculator__payment-item {
+  margin-bottom: 20px;
+
+  &:first-child {
+    margin-bottom: 30px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.calculator__payment-label {
+  margin-bottom: 1px;
+}
+
+.calculator__payment-price {
+  font-family: "Gilroy Bold", sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.02em;
+  line-height: 140%;
+}
+
+.calculator__payment-price_big {
+  font-size: 45px;
+  color: $primary-accent;
+}
+
+@media screen and (max-width: 991px) {
+  .calculator {
+    box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 40px;
+    grid-template-columns: 1fr;
+  }
+
+  .calculator__block {
+    padding: 0px;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 45px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .calculator__type__tabs {
+    margin-bottom: 36px;
+  }
+
+  .calculator__ranges-item {
+    margin-bottom: 45px;
+  }
+
+  .calculator__payments {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .calculator__payment-item {
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .calculator {
+    padding: 20px;
+  }
+
+  .calculator__type__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .calculator__ranges-item-value {
+    font-size: 20px;
+  }
+
+  .calculator__ranges-item {
+    margin-bottom: 25px;
+  }
+
+  .calculator__ranges-item-info {
+    margin-bottom: 24px;
+  }
+
+  .calculator__block {
+    margin-bottom: 49px;
+  }
+
+  .calculator__payments {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 14px;
+  }
+
+  .calculator__payment-item {
+    &:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .calculator__payment-price_big {
+    font-size: 35px;
+  }
+
+  .calculator__payment-price {
+    font-size: 20px;
+  }
+}

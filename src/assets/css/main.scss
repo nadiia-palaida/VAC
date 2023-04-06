@@ -3,6 +3,7 @@
 @import "general";
 
 @import "plugins/swiper";
+@import "plugins/range-slider";
 
 @import "components/header";
 @import "components/reviews";
@@ -16,3 +17,7 @@
 @import "components/home/advantages";
 @import "components/home/choose-vehicle";
 @import "components/home/happy-customers";
+@import "components/home/interesting-read";
+
+@import "components/blog/blog-card";
+

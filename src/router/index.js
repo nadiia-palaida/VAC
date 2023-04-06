@@ -18,6 +18,11 @@ const router = createRouter({
       name: 'quiz',
       component: () => import('../views/QuizView.vue')
     },
+    {
+      path: '/blog',
+      name: 'blog',
+      component: () => import('../views/BlogView.vue')
+    },
   ]
 })
 

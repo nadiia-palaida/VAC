@@ -8,7 +8,6 @@ export default {
   },
   methods: {
     chooseTab(value) {
-      console.log('click', value)
       this.$emit('update:modelValue', value)
     }
   }

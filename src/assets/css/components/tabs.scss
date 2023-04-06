@@ -22,4 +22,19 @@
   font-size: 16px;
   color: $primary-accent;
   text-transform: uppercase;
+
+  &.active {
+    color: $text-light;
+    background: $primary-accent;;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tabs__list {
+    height: 35px;
+  }
+
+  .tabs__button {
+    padding: 0 14.5px;
+  }
 }

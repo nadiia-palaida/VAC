@@ -7,9 +7,12 @@ import ChooseVehicle from "../components/home/ChooseVehicle.vue";
 import HappyCustomers from "../components/home/HappyCustomers.vue";
 import Reviews from "../components/Reviews.vue";
 import CalculatorSection from "../components/CalculatorSection.vue";
+import InterestingRead from "../components/home/InterestingRead.vue";
 
 export default {
-  components: {CalculatorSection, Reviews, HappyCustomers, ChooseVehicle, Advantages, Steps, HowWork, MainHome},
+  components: {
+    InterestingRead,
+    CalculatorSection, Reviews, HappyCustomers, ChooseVehicle, Advantages, Steps, HowWork, MainHome},
   data() {
     return {
       reviews: [
@@ -64,5 +67,7 @@ export default {
     <Reviews :reviews="reviews"/>
 
     <CalculatorSection/>
+
+    <InterestingRead/>
   </main>
 </template>
