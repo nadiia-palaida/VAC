@@ -23,6 +23,21 @@ const router = createRouter({
       name: 'blog',
       component: () => import('../views/BlogView.vue')
     },
+    {
+      path: '/terms',
+      name: 'terms',
+      component: () => import('../views/TermsView.vue')
+    },
+    {
+      path: '/privacy',
+      name: 'privacy',
+      component: () => import('../views/PrivacyView.vue')
+    },
+    {
+      path: '/article',
+      name: 'article',
+      component: () => import('../views/ArticleView.vue')
+    },
   ]
 })
 

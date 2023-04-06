@@ -1,3 +1,7 @@
+.section-interesting-read {
+  padding-bottom: 0px;
+}
+
 .interesting-read__content {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -67,6 +71,7 @@
   .interesting-read__btn-articles {
     max-width: 100%;
     width: 100%;
+    margin-bottom: 30px;
   }
 
   .interesting-read__swiper {

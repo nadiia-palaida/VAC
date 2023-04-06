@@ -1,0 +1,164 @@
+.footer {
+  padding: 40px 0 60px 0;
+  background: $primary-accent;
+}
+
+.footer__text {
+  font-family: "Gilroy SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 14px;
+  color: $text-light;
+}
+
+.footer__content {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.footer__info-list {
+  display: flex;
+}
+
+.footer__info-list-item {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__social-list {
+  display: flex;
+}
+
+.footer__social-list-item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__social-list-item-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.footer__icon-instagram {
+  width: 17px;
+  height: 17px;
+}
+
+.footer__icon-facebook {
+  width: 9px;
+  height: 16px;
+}
+
+.footer__icon-youtube {
+  width: 18px;
+  height: 13px;
+}
+
+.footer__company-link {
+  display: flex;
+  align-items: center;
+}
+
+.footer__company-link-text {
+  margin-right: 6.5px;
+}
+
+.footer__copyright {
+  font-family: "Gilroy Regular", sans-serif;
+  font-size: 14px;
+  line-height: 159%;
+  color: $text-light;
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    height: 200px;
+  }
+
+  .footer__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__img-wrap {
+    grid-row: 1 / -1;
+  }
+
+  .footer__company {
+    grid-row-start: 2;
+    grid-column-start: 2;
+  }
+
+  .footer__copyright {
+    grid-row-start: 2;
+    grid-column-start: -1;
+  }
+
+  .footer__social-list {
+    grid-column-start: -1;
+  }
+
+  .footer__info-list, .footer__img-wrap, .footer__social-list {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 20px 0;
+  }
+
+  .footer__content {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .footer__img-wrap {
+    grid-row: unset;
+    margin-bottom: 30px;
+    height: 24px;
+  }
+
+  .footer__img-link {
+    display: block;
+  }
+
+  .footer__img {
+    max-height: 24px;
+  }
+
+  .footer__company {
+    display: grid;
+    grid-row-start: unset;
+    grid-column-start: unset;
+    justify-content: end;
+  }
+
+  .footer__info-list {
+    margin-bottom: 30px;
+  }
+
+  .footer__copyright {
+    margin-top: 30px;
+    grid-row-start: unset;
+    grid-column: 1 / -1;
+  }
+
+  .footer__social-list {
+    grid-column-start: unset;
+  }
+
+  .footer__social-list {
+    margin-bottom: 0;
+  }
+}

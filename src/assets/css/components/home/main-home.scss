@@ -1,5 +1,5 @@
 .section-main {
-  padding-top: 120px;
+  padding-top: 200px;
   padding-bottom: 184px;
   background: right / cover url("@/assets/imgs/home/main-screen/Background.svg") no-repeat, $primary-accent;
 }
@@ -79,7 +79,7 @@
 
 @media screen and (max-width: 991px) {
   .section-main {
-    padding-top: 61px;
+    padding-top: 140px;
     padding-bottom: 129px;
     background-position: center;
   }
@@ -107,7 +107,7 @@
 
 @media screen and (max-width: 767px) {
   .section-main {
-    padding-top: 50px;
+    padding-top: 105px;
     padding-bottom: 94px;
   }
 
