@@ -49,7 +49,7 @@ export default {
 
                 <div class="steps__list-item-text">
                   <div class="steps__list-item__title title-text">{{ step.title }}</div>
-                  <div class="text">{{ step.text }}</div>
+                  <div class="text steps__list-item-description">{{ step.text }}</div>
                 </div>
               </li>
             </ul>

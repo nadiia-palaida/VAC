@@ -104,19 +104,23 @@ export default {
       </div>
     </div>
 
-    <div class="calculator__block">
+    <div class="calculator__block calculator__block_total">
       <div class="calculator__payments">
         <div class="calculator__payment-item">
           <div class="calculator__payment-label text">Bi-Weekly Payment</div>
           <div class="calculator__payment-price calculator__payment-price_big">$ {{ biWeeklyPayment }}</div>
         </div>
         <div class="calculator__payment-item">
-          <div class="calculator__payment-label text">Monthly Payment</div>
-          <div class="calculator__payment-price">$ {{ monthlyPayment }}</div>
+          <div>
+            <div class="calculator__payment-label text">Monthly Payment</div>
+            <div class="calculator__payment-price">$ {{ monthlyPayment }}</div>
+          </div>
         </div>
         <div class="calculator__payment-item">
-          <div class="calculator__payment-label text">Weekly Payment</div>
-          <div class="calculator__payment-price">$ {{ weeklyPayment }}</div>
+          <div>
+            <div class="calculator__payment-label text">Weekly Payment</div>
+            <div class="calculator__payment-price">$ {{ weeklyPayment }}</div>
+          </div>
         </div>
       </div>
 

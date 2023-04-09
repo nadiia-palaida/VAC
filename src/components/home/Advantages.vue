@@ -38,8 +38,6 @@ export default {
           <li v-for="(advantage) in advantages" class="advantages__list-item">
             <div class="advantages__list-item-bg"></div>
 
-            <!--            <img src="@/assets/imgs/home/advantages/bg1.png" alt="background triangle" class="advantages__list-item-bg-img">-->
-
             <div class="advantages__list-item-info">
               <div class="advantages__list-item-info-text">
                 <Icon :src="advantage.icon" class="advantages__list-item-icon"/>

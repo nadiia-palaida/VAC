@@ -11,12 +11,16 @@
   background: #fff;
 }
 
+.calculator__block_total {
+  padding: 60px 63px;
+}
+
 .calculator__type__tabs {
-  margin-bottom: 55px;
+  margin-bottom: 46px;
 }
 
 .calculator__ranges-item {
-  margin-bottom: 65px;
+  margin-bottom: 57px;
 
   &:last-child {
     margin-bottom: 0;
@@ -27,11 +31,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 
 .calculator__ranges-item-value {
   font-family: "Gilroy Bold", sans-serif;
+  font-size: 25px;
+  line-height: 180%;
+  letter-spacing: 0.02em;
 }
 
 .calculator__ranges-item-value-text {
@@ -95,16 +102,16 @@
   }
 
   .calculator__type__tabs {
-    margin-bottom: 36px;
+    margin-bottom: 26px;
   }
 
   .calculator__ranges-item {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
   }
 
   .calculator__payments {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2.2fr 1fr 1fr;
   }
 
   .calculator__payment-item {
@@ -113,6 +120,16 @@
     &:first-child {
       margin-bottom: 0;
     }
+
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  .calculator__btn-request {
+    max-width: 250px;
   }
 }
 
@@ -136,11 +153,11 @@
   }
 
   .calculator__ranges-item-info {
-    margin-bottom: 24px;
+    margin-bottom: 15px;
   }
 
   .calculator__block {
-    margin-bottom: 49px;
+    margin-bottom: 53px;
   }
 
   .calculator__payments {
@@ -154,11 +171,16 @@
     }
   }
 
-  .calculator__payment-price_big {
+  .calculator__payment-price.calculator__payment-price_big {
     font-size: 35px;
   }
 
   .calculator__payment-price {
     font-size: 20px;
+  }
+
+
+  .calculator__btn-request {
+    max-width: 100%;
   }
 }

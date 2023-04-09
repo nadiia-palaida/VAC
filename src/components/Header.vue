@@ -11,11 +11,12 @@ export default {
         <div class="header__logo">
           <router-link :to="{name: 'home'}">
             <picture>
-              <source media="(max-width:768px)" srcset="@/assets/imgs/mobile/logo.svg">
+              <source media="(max-width:767px)" srcset="@/assets/imgs/mobile/logo.svg">
               <img src="@/assets/imgs/logo.svg" alt="logo">
             </picture>
           </router-link>
         </div>
+
 
         <div class="header__buttons">
           <router-link :to="{name: 'catalog'}" class="header__btn-inventory btn btn_liner btn_bordered">Inventory

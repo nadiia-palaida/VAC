@@ -19,6 +19,7 @@
 }
 
 .interesting-read__btn-articles {
+  min-width: 180px;
   max-width: 180px;
   margin-left: auto;
   margin-bottom: 60px;
@@ -55,6 +56,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  .section-interesting-read {
+    padding-top: 28px;
+  }
+
   .interesting-read__content {
     grid-template-columns: 100%;
   }
@@ -64,7 +69,7 @@
   }
 
   .interesting-read__articles {
-    margin-bottom: 30px;
+    margin-bottom: 33px;
 
   }
 
