@@ -1,19 +1,14 @@
 <script>
 import Calculator from "../components/Calculator.vue";
+import PageTitle from "../components/PageTitle.vue";
 export default {
   name: "CalculatorView",
-  components: {Calculator}
+  components: {PageTitle, Calculator}
 }
 </script>
 
 <template>
-  <section class="page-title first-section">
-    <div class="container">
-      <div class="page-title__content">
-        <h1 class="page-title__title title">Use our free calculator!</h1>
-      </div>
-    </div>
-  </section>
+  <PageTitle title="Use our free calculator!"/>
 
   <section class="page-description">
     <div class="container">

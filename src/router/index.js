@@ -43,6 +43,21 @@ const router = createRouter({
       name: 'calculator',
       component: () => import('../views/CalculatorView.vue')
     },
+    {
+      path: '/vehicle-videos',
+      name: 'vehicle-videos',
+      component: () => import('../views/VehicleVideosView.vue')
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/contacts',
+      name: 'contacts',
+      component: () => import('../views/ContactsView.vue')
+    },
   ]
 })
 

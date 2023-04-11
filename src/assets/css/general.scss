@@ -56,6 +56,10 @@ body {
   .container {
     max-width: 720px;
   }
+
+  .container-tablet {
+    max-width: 600px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -170,11 +174,18 @@ body {
 }
 
 .page-title {
-  padding: 120px 0 40px 0;
+  margin-top: 80px;
+  height: 145px;
   background-image: url("@/assets/imgs/Bg.jpg");
   background-repeat: no-repeat;
   background-position: top 75% left;
   background-size: cover;
+}
+
+.page-title__content {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .page-description {
@@ -234,7 +245,8 @@ body {
   }
 
   .page-title {
-    padding: 75px 0 20px 0;
+    height: 116px;
+    margin-top: 55px;
     background: $primary-accent;
   }
 

@@ -11,6 +11,7 @@
 @import "components/calculator";
 @import "components/calculator-section";
 @import "components/footer";
+@import "components/pagination";
 
 @import "components/home/main-home";
 @import "components/home/how-work";
@@ -19,6 +20,12 @@
 @import "components/home/choose-vehicle";
 @import "components/home/happy-customers";
 @import "components/home/interesting-read";
+
+@import "components/vehicle-video/vehicle-video-all";
+@import "components/vehicle-video/vehicle-video-item";
+@import "components/vehicle-video/vehicle-popup";
+
+@import "components/about/about-info";
 
 @import "components/blog/blog-card";
 

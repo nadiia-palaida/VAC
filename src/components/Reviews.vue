@@ -28,11 +28,7 @@ export default {
             <swiper-slide v-for="review in reviews" class="reviews__carousel-swiper-slide">
               <div class="reviews__carousel-slide-content">
 
-<!--                <div class="reviews__carousel-img-wrapper">-->
-<!--                  <div class="reviews__carousel-img-wrap">-->
                     <img :src="getImgFileUrl(review.photo)" alt="reviews image" class="reviews__carousel-img">
-<!--                  </div>-->
-<!--                </div>-->
 
                 <div class="reviews__description">
                   <div class="reviews__name text">{{ review.name }}</div>
