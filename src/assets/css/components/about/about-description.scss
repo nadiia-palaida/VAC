@@ -1,0 +1,121 @@
+.our-team__content {
+  display: grid;
+  grid-template-columns: 10fr 11.5fr;
+  grid-gap: 0 83px;
+}
+
+.our-team__img-wrap {
+  padding-top: 14px;
+}
+
+.about-title-text {
+  margin-bottom: 13px;
+}
+
+.features-about__content {
+  display: grid;
+  grid-template-columns: 12fr 12fr;
+}
+
+.features-about__img-wrap {
+  padding-top: 12px;
+}
+
+.features-about__text {
+  margin-bottom: 52px;
+}
+
+.features-about__list {
+  grid-gap: 50px 40px;
+}
+
+.section-calculator-about {
+  padding-bottom: 36px;
+}
+
+@media screen and (max-width: 991px) {
+  .our-team__content {
+    grid-template-columns: 1fr;
+  }
+
+  .features-about__content {
+    grid-template-columns: 1fr;
+  }
+
+  .our-team__text-wrap {
+    margin-bottom: 24px;
+  }
+
+  .our-team__img-wrap {
+    img {
+      max-height: 428px;
+      width: 100%;
+    }
+  }
+
+  .features-about__column {
+    &:first-child {
+      grid-row-start: 2;
+    }
+  }
+
+  .features-about__img-wrap {
+    width: 100%;
+    padding-top: 0;
+
+    img {
+      width: 100%;
+      max-height: 428px;
+     }
+  }
+
+  .section-features-about {
+    padding-bottom: 73px;
+  }
+
+  .section-calculator-about {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-title-text {
+    margin-bottom: 7px;
+  }
+
+  .our-team__img-wrap {
+    img {
+      max-height: 227px;
+    }
+  }
+
+  .features-about__img-wrap {
+    img {
+      max-height: 227px;
+    }
+  }
+
+  .our-team__text-wrap {
+    margin-bottom: 7px;
+  }
+
+  .section-features-about {
+    padding-top: 35px;
+  }
+
+  .features-about__text {
+    margin-bottom: 26px;
+  }
+
+  .features-about__list {
+    grid-gap: 14px 40px;
+  }
+
+  .section-features-about {
+    padding-bottom: 37px;
+  }
+
+  .section-calculator-about {
+    padding-bottom: 30px;
+  }
+}
