@@ -203,6 +203,30 @@ body {
   margin-top: 11px;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 110;
+}
+
+.modal__wrap {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.modal__content {
+  max-width: 570px;
+  margin-left: auto;
+  background: #fff;
+  height: 100%;
+  padding: 27px 125px 29px 60px;
+  overflow: auto;
+}
+
 @media screen and (max-width: 991px) {
   .section {
     padding: 80px 0;
@@ -211,6 +235,11 @@ body {
   .page-description__content {
     grid-gap: 0 60px;
     grid-template-columns: 12fr 10fr;
+  }
+
+  .modal__content {
+    max-width: 504px;
+    padding: 26px 28px 105px 60px;
   }
 }
 
@@ -257,5 +286,10 @@ body {
 
   .page-description__content {
     grid-template-columns: 1fr;
+  }
+
+  .modal__content {
+    max-width: 100%;
+    padding: 14px 22px 50px 40px;
   }
 }

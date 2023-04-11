@@ -29,7 +29,7 @@ export default {
                   allowfullscreen class="vehicle-popup__video-iframe"></iframe>
 
           <button @click="closeModalAction" class="vehicle-popup__cross">
-            <Icon src="cross-btn" width="24" height="24"/>
+            <Icon src="cross-btn" width="24" height="24" class="vehicle-popup__cross-icon"/>
           </button>
         </div>
       </div>

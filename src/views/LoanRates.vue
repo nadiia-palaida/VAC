@@ -1,9 +1,12 @@
 <script>
 import PageTitle from "../components/PageTitle.vue";
 import CreditPolicy from "../components/loan-rates/CreditPolicy.vue";
+import InterestRates from "../components/loan-rates/InterestRates.vue";
+import Benefits from "../components/loan-rates/Benefits.vue";
+import CalculatorSection from "../components/CalculatorSection.vue";
 export default {
   name: "LoanRates",
-  components: {CreditPolicy, PageTitle}
+  components: {CalculatorSection, Benefits, InterestRates, CreditPolicy, PageTitle}
 }
 </script>
 
@@ -11,4 +14,10 @@ export default {
   <PageTitle title="Loan rates"/>
 
   <CreditPolicy/>
+
+  <InterestRates/>
+
+  <Benefits/>
+
+  <CalculatorSection class="benefits__calculator-section"/>
 </template>

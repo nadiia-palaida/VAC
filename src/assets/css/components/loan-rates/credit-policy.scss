@@ -43,5 +43,18 @@
 @media screen and (max-width: 767px) {
   .credit-policy__block {
     padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .section-credit-policy {
+    padding-top: 30px;
+  }
+
+  .credit-policy__title {
+    margin-bottom: 10px;
+  }
+
+  .credit-policy__text {
+    margin-bottom: 32px;
   }
 }

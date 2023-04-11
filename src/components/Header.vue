@@ -1,6 +1,22 @@
 <script>
+import MenuModal from "./modals/MenuModal.vue";
+
 export default {
-  name: "Header"
+  name: "Header",
+  components: {MenuModal},
+  data() {
+    return {
+      openedModal: false
+    }
+  },
+  methods: {
+    openModal() {
+      this.openedModal = true
+    },
+    onCloseModal() {
+      this.openedModal = false
+    }
+  }
 }
 </script>
 
@@ -24,7 +40,7 @@ export default {
 
           <router-link :to="{name: 'quiz'}" class="header__btn-request btn btn_solid">Request a car</router-link>
 
-          <button class="menu-btn">
+          <button @click="openModal" class="menu-btn">
             <span class="menu-btn__line"></span>
             <span class="menu-btn__line"></span>
             <span class="menu-btn__line"></span>
@@ -33,4 +49,8 @@ export default {
       </div>
     </div>
   </header>
+
+  <Teleport to="body">
+    <MenuModal @close-modal="onCloseModal" v-if="openedModal"/>
+  </Teleport>
 </template>
