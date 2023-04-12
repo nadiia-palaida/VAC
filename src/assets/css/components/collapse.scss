@@ -1,0 +1,81 @@
+.collapse {
+  padding: 20px 30px;
+  padding-bottom: 25px;
+  border: 1px solid #D7D7D7;
+  cursor: pointer;
+}
+
+.collapse_active {
+  .collapse__title-wrap {
+    &::after {
+      transform: rotate(-180deg) translateY(50%);
+    }
+  }
+}
+
+.collapse__title-wrap {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url("@/assets/imgs/Arrow-Bottom.svg");
+    transition: all 0.5s;
+  }
+}
+
+.collapse__title {
+  padding-right: 65px;
+}
+
+.collapse__text {
+  margin-top: 11px;
+  padding-bottom: 9px;
+  padding-right: 65px;
+}
+
+@media screen and (max-width: 991px) {
+  .collapse_active {
+    padding-top: 12px;
+  }
+
+  .collapse__text {
+    padding-right: 50px;
+  }
+
+  .collapse__text {
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .collapse {
+    padding: 19px;
+  }
+
+  .collapse_active {
+    padding-top: 18px;
+  }
+
+  .collapse__title {
+    padding-right: 30px;
+  }
+
+  .collapse__text {
+    padding-right: 0px;
+    padding-bottom: 0;
+    margin-top: 14px;
+  }
+
+  .collapse__title-wrap {
+    &::after {
+      top: 10px;
+    }
+  }
+}

@@ -8,10 +8,10 @@ import {useModalStore} from "./store/modal";
 export default {
   components: {Footer, Header},
   computed: {
-    ...mapState(useModalStore, ['modal']),
+    ...mapState(useModalStore, ['component']),
     modalComponent() {
-      if(this.modal) {
-        return defineAsyncComponent(() => import(`./components/modals/${this.modal}.vue`))
+      if(this.component) {
+        return defineAsyncComponent(() => import(`./components/modals/${this.component}.vue`))
       } else {
         return ''
       }
@@ -25,7 +25,7 @@ export default {
 
   <router-view></router-view>
 
-  <component :is="modalComponent" class="modal-component"/>
+  <component v-if="this.modalComponent" :is="modalComponent" class="modal-component"/>
 
   <Footer/>
 </template>

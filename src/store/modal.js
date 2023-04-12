@@ -1,4 +1,5 @@
 import {defineStore} from "pinia";
+import {hideBodyScrollbar, showBodyScrollbar} from "../helpers";
 
 export const useModalStore = defineStore('modal', {
     state: () => ({ component: null, data: null }),
@@ -9,10 +10,12 @@ export const useModalStore = defineStore('modal', {
         openModal({component, data}) {
             this.component = component
             this.data = data
+            hideBodyScrollbar()
         },
         closeModal(){
             this.component = null
             this.data = null
+            showBodyScrollbar()
         }
     },
 })

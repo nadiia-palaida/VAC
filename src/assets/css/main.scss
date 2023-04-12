@@ -12,6 +12,9 @@
 @import "components/calculator-section";
 @import "components/footer";
 @import "components/pagination";
+@import "components/collapse";
+
+@import "components/form/input";
 
 @import "components/modals/contacts-modal";
 @import "components/modals/menu-modal";
@@ -38,4 +41,5 @@
 @import "components/blog/blog-card";
 
 @import "views/calculator-view";
+@import "views/terms";
 

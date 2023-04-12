@@ -1,21 +1,11 @@
 <script>
-import MenuModal from "./modals/MenuModal.vue";
+import {mapActions} from "pinia";
+import {useModalStore} from "../store/modal";
 
 export default {
   name: "Header",
-  components: {MenuModal},
-  data() {
-    return {
-      openedModal: false
-    }
-  },
   methods: {
-    openModal() {
-      this.openedModal = true
-    },
-    onCloseModal() {
-      this.openedModal = false
-    }
+    ...mapActions(useModalStore, ['openModal']),
   }
 }
 </script>
@@ -40,7 +30,7 @@ export default {
 
           <router-link :to="{name: 'quiz'}" class="header__btn-request btn btn_solid">Request a car</router-link>
 
-          <button @click="openModal" class="menu-btn">
+          <button @click.stop.prevent="openModal({component: 'MenuModal'})" class="menu-btn">
             <span class="menu-btn__line"></span>
             <span class="menu-btn__line"></span>
             <span class="menu-btn__line"></span>
@@ -49,8 +39,4 @@ export default {
       </div>
     </div>
   </header>
-
-  <Teleport to="body">
-    <MenuModal @close-modal="onCloseModal" v-if="openedModal"/>
-  </Teleport>
 </template>

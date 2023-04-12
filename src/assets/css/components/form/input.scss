@@ -1,0 +1,56 @@
+.input {
+  position: relative;
+}
+
+.input_icon {
+  .input__item {
+    padding-left: 44px;
+  }
+}
+
+.input_error {
+  .input__item {
+    border-color: #F54E4E;
+  }
+}
+
+.input__item {
+  display: block;
+  width: 100%;
+  padding: 9px 20px;
+  border: 1px solid #D7D7D7;
+  border-radius: 2px;
+  font-family: "Gilroy Medium", sans-serif;
+  font-size: 16px;
+  line-height: 159%;
+  color: $secondary-text;
+
+  &::placeholder {
+    color: #D7D7D7;
+  }
+
+  &:focus {
+    border-color: $secondary-text;
+  }
+}
+
+.input__icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 24px;
+  width: 24px;
+}
+
+.input__error {
+  margin-top: 2px;
+  font-family: "Gilroy Regular", sans-serif;
+  font-size: 14px;
+  line-height: 159%;
+  color: #F54E4E;
+}
+
+.input__wrap {
+  position: relative;
+}

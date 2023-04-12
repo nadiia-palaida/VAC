@@ -1,15 +1,13 @@
 <script>
 import Icon from "../Icon.vue";
-import ContactsModal from "./ContactsModal.vue";
+import {mapActions} from "pinia";
+import {useModalStore} from "../../store/modal";
 
 export default {
   name: "MenuModal",
-  emits: ['closeModal'],
-  components: {ContactsModal, Icon},
+  components: {Icon},
   data() {
     return {
-      openedContactsModal: false,
-
       menuList: [
         {
           title: 'Inventory',
@@ -18,7 +16,8 @@ export default {
         {
           title: 'Contact us',
           linkName: '',
-          handler: this.openContactsModal
+          handler: this.openModal,
+          handlerData: {component: 'ContactsModal'}
         },
         {
           title: 'About VAC',
@@ -61,17 +60,7 @@ export default {
     }
   },
   methods: {
-    closeModal() {
-      this.$emit('closeModal')
-    },
-    openContactsModal() {
-      this.openedContactsModal = true
-      console.log('openContactsModal', this.openedContactsModal)
-      // this.closeModal()
-    },
-    onCloseContactsModal() {
-      this.openedContactsModal = false
-    }
+    ...mapActions(useModalStore, ['closeModal', 'openModal']),
   }
 }
 </script>
@@ -92,7 +81,7 @@ export default {
                              class="menu__list-item-link">{{ menuItem.title }}
                 </router-link>
 
-                <button v-else @click="menuItem.handler" class="menu__list-item-link">{{ menuItem.title }}</button>
+                <button v-else @click.prevent.stop="menuItem.handler(menuItem.handlerData)" class="menu__list-item-link">{{ menuItem.title }}</button>
               </li>
             </ul>
           </div>
@@ -110,8 +99,4 @@ export default {
       </div>
     </div>
   </div>
-
-  <Teleport to="body">
-    <ContactsModal @close-contacts-modal="onCloseContactsModal" v-if="openedContactsModal"/>
-  </Teleport>
 </template>
