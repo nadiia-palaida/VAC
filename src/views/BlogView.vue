@@ -1,9 +1,11 @@
 <script>
+import PageTitle from "../components/PageTitle.vue";
 export default {
-  name: "BlogView"
+  name: "BlogView",
+  components: {PageTitle}
 }
 </script>
 
 <template>
-Blog
+  <PageTitle title="Our blog"/>
 </template>
