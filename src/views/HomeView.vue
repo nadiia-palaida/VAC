@@ -7,7 +7,7 @@ import ChooseVehicle from "../components/home/ChooseVehicle.vue";
 import HappyCustomers from "../components/home/HappyCustomers.vue";
 import Reviews from "../components/Reviews.vue";
 import CalculatorSection from "../components/CalculatorSection.vue";
-import InterestingRead from "../components/home/InterestingRead.vue";
+import InterestingRead from "../components/InterestingRead.vue";
 
 export default {
   components: {
@@ -44,7 +44,31 @@ export default {
           text: 'In irure et ipsum eiusmod adipisicing id elit cillum proident. ' +
               ' Anim mollit irure Lorem proident veniam excepteur non irure Lorem. Lorem esse sint in nisi id esse.'
         },
-      ]
+      ],
+
+      interestingArticles: [
+        {
+          id: 1,
+          img: 'blog/1.jpg',
+          title: 'How to save on buying a car? Why is it better to buy from us',
+          text: 'lorem ipsum',
+          date: '10 May, 2020'
+        },
+        {
+          id: 2,
+          img: 'blog/2.jpg',
+          title: 'How fast can you order a car in Canada?',
+          text: 'lorem ipsum',
+          date: '10 May, 2020'
+        },
+        {
+          id: 3,
+          img: 'blog/3.jpg',
+          title: 'How to save on buying a car? Why is it better to buy from us',
+          text: 'lorem ipsum',
+          date: '10 May, 2020'
+        },
+      ],
     }
   }
 }
@@ -68,6 +92,6 @@ export default {
 
     <CalculatorSection/>
 
-    <InterestingRead/>
+    <InterestingRead :articles="interestingArticles"/>
   </main>
 </template>

@@ -35,9 +35,10 @@
   height: auto;
 }
 
-.interesting-read__custom-carousel-navigation {
+.interesting-read__custom-carousel-navigation_mobile {
   display: none;
 }
+
 
 @media screen and (max-width: 991px) {
   .interesting-read__swiper {
@@ -52,6 +53,10 @@
     &:not(&:first-child, &:nth-child(2)) {
       //margin-left: 50px;
     }
+  }
+
+  .interesting-read__custom-carousel-navigation_mobile {
+    display: block;
   }
 }
 
@@ -95,9 +100,5 @@
     .blog-card {
       box-shadow: none;
     }
-  }
-
-  .interesting-read__custom-carousel-navigation {
-    display: block;
   }
 }

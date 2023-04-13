@@ -1,9 +1,15 @@
 <script>
-import BlogCard from "../blog/BlogCard.vue";
-import Icon from "../Icon.vue";
+import BlogCard from "./blog/BlogCard.vue";
+import Icon from "./Icon.vue";
+
 export default {
   name: "InterestingRead",
   components: {Icon, BlogCard},
+  props: {
+    articles: {type: Array, required: true},
+    title: {type: String, default: 'Interesting to read'},
+    showDesktopNavigation: {type: Boolean, default: false}
+  },
   data() {
     return {
       interestingArticles: [
@@ -35,9 +41,9 @@ export default {
           slidesPerView: 1,
           enabled: true,
         },
-        767: {
+        768: {
           slidesPerView: 2,
-          enabled: false
+          enabled: true
         },
         992: {
           slidesPerView: 3,
@@ -52,22 +58,23 @@ export default {
   <section class="section section-interesting-read">
     <div class="container">
       <div class="interesting-read__content">
-          <h2 class="interesting-read__title title-2">Interesting to read</h2>
+        <h2 class="interesting-read__title title-2">{{ title }}</h2>
 
-          <router-link :to="{name: 'blog'}" class="interesting-read__btn-articles btn btn_liner btn_bordered">
-            all articles
-          </router-link>
+        <router-link :to="{name: 'blog'}" class="interesting-read__btn-articles btn btn_liner btn_bordered">
+          all articles
+        </router-link>
 
         <div class="interesting-read__articles">
           <swiper-container :breakpoints="swiperBreakpoints" :spaceBetween="20" :loop="true"
                             :navigation="{nextEl: '.interesting-read__carousel-btn-next', prevEl: '.interesting-read__carousel-btn-prev'}"
                             class="interesting-read__swiper">
-            <swiper-slide  v-for="(article, articleIndex) in interestingArticles" :key="`interesting-article-${articleIndex}`" class="interesting-read__swiper-slide">
+            <swiper-slide v-for="(article, articleIndex) in articles" :key="`interesting-article-${articleIndex}`"
+                          class="interesting-read__swiper-slide">
               <BlogCard :article="article"/>
             </swiper-slide>
           </swiper-container>
 
-          <div class="swiper__custom-carousel-navigation interesting-read__custom-carousel-navigation">
+          <div class="swiper__custom-carousel-navigation interesting-read__custom-carousel-navigation" :class="{'interesting-read__custom-carousel-navigation_mobile': !showDesktopNavigation}">
             <button
                 class="swiper__custom-carousel-navigation-btn swiper__custom-carousel-navigation-btn-prev interesting-read__carousel-btn-prev">
               <Icon src="carousel-arrow-left" width="13" height="24"
