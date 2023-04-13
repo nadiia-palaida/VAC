@@ -148,8 +148,12 @@ export default {
       return this.allVideos.find(item => item.currentPage === this.activePage)
     }
   },
+  mounted() {
+    this.$router.push({name: 'vehicle-videos', query: {page: this.activePage}})
+  },
   methods: {
     onChangePage(page) {
+      this.$router.push({name: 'vehicle-videos', query: {page: page}})
       this.activePage = page
     }
   }

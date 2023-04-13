@@ -11,8 +11,6 @@ export default {
   <PageTitle title="Vehicle videos"/>
 
   <VehicleVideosAll/>
-
-
 </template>
 
 <style scoped>

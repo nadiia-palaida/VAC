@@ -147,5 +147,10 @@
         <circle cx="35" cy="35" r="33.5" stroke="#7481FF" stroke-width="3"/>
         <path d="M21 37.2925L32.3077 47.6L50.4 21" stroke="#7481FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
+
+    <symbol viewBox="0 0 24 24" id="arrow-back" fill="none">
+        <path d="M13.9995 20L5.99951 12L13.9995 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 </svg>
+
 

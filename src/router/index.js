@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior() {
+    return { top: 0 }
+  },
   routes: [
     {
       path: '/',
@@ -34,7 +37,7 @@ const router = createRouter({
       component: () => import('../views/PrivacyView.vue')
     },
     {
-      path: '/article',
+      path: '/articles/:id',
       name: 'article',
       component: () => import('../views/ArticleView.vue')
     },

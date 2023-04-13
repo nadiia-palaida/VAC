@@ -1,0 +1,39 @@
+.section-article {
+  padding-top: 80px;
+}
+
+.article__content {
+  padding-top: 40px;
+}
+
+.article__poster {
+  max-height: 200px;
+}
+
+.article__poster-img {
+  width: 100%;
+}
+
+.article__btn-back-icon {
+  height: 24px;
+  width: 24px;
+  color: $secondary-text;
+  margin-right: 5px;
+}
+
+.article__btn-back {
+  display: flex;
+  align-items: center;
+  font-family: "Gilroy Bold", sans-serif;
+  font-size: 16px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $secondary-text;
+}
+
+.article__block {
+  padding: 60px;
+  background: #FFFFFF;
+  border-radius: 5px 5px 0px 0px;
+}

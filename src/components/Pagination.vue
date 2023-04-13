@@ -7,12 +7,17 @@ export default {
     currentPage: {type: Number, required: true},
     lastPage: {type: Number, required: true},
     maxPagesShown: {type: Number, default: 4},
+    showNavigation: {type: Boolean, default: false}
   },
   methods: {
     onClick(page) {
       if (page <= this.lastPage && page > 0) {
         this.$emit('update:modelValue', page)
       }
+    }
+  },
+  computed: {
+    pages() {
     }
   }
 }
