@@ -19,25 +19,25 @@ export default {
             {
               id: 1,
               title: 'VAC\'s Vehicle Shoot #10: 2018 Chevy Cruze Hatchback',
-              poster: 'vehicle-videos/1.jpg',
+              poster: 'vehicle-videos/1.jpeg',
               videoUrl: 'https://www.youtube.com/embed/X7qEjYMuAcw'
             },
             {
               id: 2,
               title: 'VAC\'s Vehicle Shoot #11: Toyota Highlander',
-              poster: 'vehicle-videos/2.jpg',
+              poster: 'vehicle-videos/2.jpeg',
               videoUrl: 'https://www.youtube.com/embed/PtFPj1ml0yg'
             },
             {
               id: 3,
               title: 'VAC\'s Vehicle Shoot #09: 2019 Mazda CX-5',
-              poster: 'vehicle-videos/3.jpg',
+              poster: 'vehicle-videos/3.jpeg',
               videoUrl: 'https://www.youtube.com/embed/XSSdfHZDH90'
             },
             {
               id: 4,
               title: 'Some Vehicles VAC Offers!',
-              poster: 'vehicle-videos/4.jpg',
+              poster: 'vehicle-videos/4.jpeg',
               videoUrl: 'https://www.youtube.com/embed/LVhC17roLBI'
             },
           ]
@@ -50,27 +50,27 @@ export default {
             {
               id: 1,
               title: 'VAC\'s Vehicle Shoot #10: 2018 Chevy Cruze Hatchback',
-              poster: 'vehicle-videos/3.jpg',
+              poster: 'vehicle-videos/3.jpeg',
               videoUrl: 'https://www.youtube.com/embed/XSSdfHZDH90'
 
             },
             {
               id: 2,
               title: 'VAC\'s Vehicle Shoot #11: Toyota Highlander',
-              poster: 'vehicle-videos/4.jpg',
+              poster: 'vehicle-videos/4.jpeg',
               videoUrl: 'https://www.youtube.com/embed/LVhC17roLBI'
 
             },
             {
               id: 3,
               title: 'VAC\'s Vehicle Shoot #09: 2019 Mazda CX-5',
-              poster: 'vehicle-videos/1.jpg',
+              poster: 'vehicle-videos/1.jpeg',
               videoUrl: 'https://www.youtube.com/embed/X7qEjYMuAcw'
             },
             {
               id: 4,
               title: 'Some Vehicles VAC Offers!',
-              poster: 'vehicle-videos/2.jpg',
+              poster: 'vehicle-videos/2.jpeg',
               videoUrl: 'https://www.youtube.com/embed/PtFPj1ml0yg'
             },
           ]
@@ -83,14 +83,14 @@ export default {
             {
               id: 1,
               title: 'VAC\'s Vehicle Shoot #10: 2018 Chevy Cruze Hatchback',
-              poster: 'vehicle-videos/3.jpg',
+              poster: 'vehicle-videos/3.jpeg',
               videoUrl: 'https://www.youtube.com/embed/XSSdfHZDH90'
 
             },
             {
               id: 2,
               title: 'VAC\'s Vehicle Shoot #11: Toyota Highlander',
-              poster: 'vehicle-videos/1.jpg',
+              poster: 'vehicle-videos/1.jpeg',
               videoUrl: 'https://www.youtube.com/embed/X7qEjYMuAcw'
 
 
@@ -98,13 +98,13 @@ export default {
             {
               id: 3,
               title: 'VAC\'s Vehicle Shoot #09: 2019 Mazda CX-5',
-              poster: 'vehicle-videos/4.jpg',
+              poster: 'vehicle-videos/4.jpeg',
               videoUrl: 'https://www.youtube.com/embed/LVhC17roLBI'
             },
             {
               id: 4,
               title: 'Some Vehicles VAC Offers!',
-              poster: 'vehicle-videos/2.jpg',
+              poster: 'vehicle-videos/2.jpeg',
               videoUrl: 'https://www.youtube.com/embed/PtFPj1ml0yg'
             },
           ]
@@ -117,25 +117,25 @@ export default {
             {
               id: 1,
               title: 'VAC\'s Vehicle Shoot #10: 2018 Chevy Cruze Hatchback',
-              poster: 'vehicle-videos/2.jpg',
+              poster: 'vehicle-videos/2.jpeg',
               videoUrl: 'https://www.youtube.com/embed/PtFPj1ml0yg'
             },
             {
               id: 2,
               title: 'VAC\'s Vehicle Shoot #11: Toyota Highlander',
-              poster: 'vehicle-videos/1.jpg',
+              poster: 'vehicle-videos/1.jpeg',
               videoUrl: 'https://www.youtube.com/embed/X7qEjYMuAcw'
             },
             {
               id: 3,
               title: 'VAC\'s Vehicle Shoot #09: 2019 Mazda CX-5',
-              poster: 'vehicle-videos/4.jpg',
+              poster: 'vehicle-videos/4.jpeg',
               videoUrl: 'https://www.youtube.com/embed/LVhC17roLBI'
             },
             {
               id: 4,
               title: 'Some Vehicles VAC Offers!',
-              poster: 'vehicle-videos/3.jpg',
+              poster: 'vehicle-videos/3.jpeg',
               videoUrl: 'https://www.youtube.com/embed/XSSdfHZDH90'
             },
           ]

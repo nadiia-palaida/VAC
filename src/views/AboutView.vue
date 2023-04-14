@@ -13,7 +13,7 @@ export default {
       reviews: [
         {
           id: 1,
-          photo: 'reviews/1.jpg',
+          photo: 'reviews/1.jpeg',
           name: 'Laura Chaisson',
           text: 'In irure et ipsum eiusmod adipisicing id elit cillum proident. ' +
               'Adipisicing ullamco nisi veniam occaecat id excepteur ad non. Sunt occaecat elit ullamco commodo exercitation.' +
@@ -21,7 +21,7 @@ export default {
         },
         {
           id: 2,
-          photo: 'reviews/1.jpg',
+          photo: 'reviews/1.jpeg',
           name: 'Laura',
           text: 'In irure et ipsum eiusmod adipisicing id elit cillum proident. ' +
               'Adipisicing ullamco nisi veniam occaecat id excepteur ad non. Sunt occaecat elit ullamco commodo exercitation.' +
@@ -34,7 +34,7 @@ export default {
         },
         {
           id: 3,
-          photo: 'reviews/1.jpg',
+          photo: 'reviews/1.jpeg',
           name: 'Chaisson',
           text: 'In irure et ipsum eiusmod adipisicing id elit cillum proident. ' +
               ' Anim mollit irure Lorem proident veniam excepteur non irure Lorem. Lorem esse sint in nisi id esse.'

@@ -1,0 +1,18 @@
+.section-cars-catalog {
+  padding-top: 80px;
+}
+
+.cars-catalog__wrap {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.cars-catalog__items {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 19px
+}
+
+.car-card__swiper {
+  max-height: 217px;
+}

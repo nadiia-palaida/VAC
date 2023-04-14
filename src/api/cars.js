@@ -1,4 +1,4 @@
-const cars = [
+export const cars = [
     {
         currentPage: 1,
         lastPage: 2,
@@ -16,14 +16,14 @@ const cars = [
                 kilometres: 46000,
                 images: {
                     interior: [
-                        'cars/1/5.jpg',
-                        'cars/1/6.jpg',
+                        'cars/1/interior/5.jpeg',
+                        'cars/1/interior/6.jpeg',
                     ],
                     exterior: [
-                        'cars/1/1.jpg',
-                        'cars/1/2.jpg',
-                        'cars/1/3.jpg',
-                        'cars/1/4.jpg',
+                        'cars/1/exterior/1.jpeg',
+                        'cars/1/exterior/2.jpeg',
+                        'cars/1/exterior/3.jpeg',
+                        'cars/1/exterior/4.jpeg',
                     ]
                 },
                 details: [],
@@ -43,12 +43,12 @@ const cars = [
                 kilometres: 73000,
                 images: {
                     interior: [
-                        'cars/2/3.jpg',
-                        'cars/2/4.jpg',
+                        'cars/2/interior/3.jpeg',
+                        'cars/2/interior/4.jpeg',
                     ],
                     exterior: [
-                        'cars/2/1.jpg',
-                        'cars/2/2.jpg',
+                        'cars/2/exterior/1.jpeg',
+                        'cars/2/exterior/2.jpeg',
                     ]
                 },
                 details: [],
@@ -68,12 +68,12 @@ const cars = [
                 kilometres: 77000,
                 images: {
                     interior: [
-                        'cars/3/2.jpg',
-                        'cars/3/3.jpg',
-                        'cars/3/4.jpg',
+                        'cars/3/interior/2.jpeg',
+                        'cars/3/interior/3.jpeg',
+                        'cars/3/interior/4.jpeg',
                     ],
                     exterior: [
-                        'cars/3/1.jpg',
+                        'cars/3/exterior/1.jpeg',
                     ]
                 },
                 details: [],
@@ -95,9 +95,9 @@ const cars = [
                     interior: [
                     ],
                     exterior: [
-                        'cars/4/1.jpg',
-                        'cars/4/2.jpg',
-                        'cars/4/3.jpg',
+                        'cars/4/exterior/1.jpeg',
+                        'cars/4/exterior/2.jpeg',
+                        'cars/4/exterior/3.jpeg',
                     ]
                 },
                 details: [],
@@ -117,15 +117,15 @@ const cars = [
                 kilometres: 111000,
                 images: {
                     interior: [
-                        'cars/5/4.jpg',
-                        'cars/5/5.jpg',
-                        'cars/5/7.jpg',
-                        'cars/5/8.jpg',
+                        'cars/5/interior/4.jpeg',
+                        'cars/5/interior/5.jpeg',
+                        'cars/5/interior/7.jpeg',
+                        'cars/5/interior/8.jpeg',
                     ],
                     exterior: [
-                        'cars/5/1.jpg',
-                        'cars/5/2.jpg',
-                        'cars/5/3.jpg',
+                        'cars/5/exterior/1.jpeg',
+                        'cars/5/exterior/2.jpeg',
+                        'cars/5/exterior/3.jpeg',
                     ]
                 },
                 details: [],
@@ -145,14 +145,14 @@ const cars = [
                 kilometres: 115000,
                 images: {
                     interior: [
-                        'cars/6/3.jpg',
-                        'cars/6/4.jpg',
-                        'cars/6/5.jpg',
-                        'cars/6/7.jpg',
+                        'cars/6/interior/3.jpeg',
+                        'cars/6/interior/4.jpeg',
+                        'cars/6/interior/5.jpeg',
+                        'cars/6/interior/7.jpeg',
                     ],
                     exterior: [
-                        'cars/6/1.jpg',
-                        'cars/6/2.jpg',
+                        'cars/6/exterior/1.jpeg',
+                        'cars/6/exterior/2.jpeg',
                     ]
                 },
                 details: [],
@@ -172,14 +172,14 @@ const cars = [
                 kilometres: 69000,
                 images: {
                     interior: [
-                        'cars/7/4.jpg',
-                        'cars/7/5.jpg',
-                        'cars/7/6.jpg',
+                        'cars/7/interior/4.jpeg',
+                        'cars/7/interior/5.jpeg',
+                        'cars/7/interior/6.jpeg',
                     ],
                     exterior: [
-                        'cars/7/1.jpg',
-                        'cars/7/2.jpg',
-                        'cars/7/3.jpg',
+                        'cars/7/exterior/1.jpeg',
+                        'cars/7/exterior/2.jpeg',
+                        'cars/7/exterior/3.jpeg',
                     ]
                 },
                 details: [],
@@ -199,15 +199,15 @@ const cars = [
                 kilometres: 113000,
                 images: {
                     interior: [
-                        'cars/8/4.jpg',
-                        'cars/8/5.jpg',
-                        'cars/8/6.jpg',
-                        'cars/8/7.jpg',
+                        'cars/8/interior/4.jpeg',
+                        'cars/8/interior/5.jpeg',
+                        'cars/8/interior/6.jpeg',
+                        'cars/8/interior/7.jpeg',
                     ],
                     exterior: [
-                        'cars/8/1.jpg',
-                        'cars/8/2.jpg',
-                        'cars/8/3.jpg',
+                        'cars/8/exterior/1.jpeg',
+                        'cars/8/exterior/2.jpeg',
+                        'cars/8/exterior/3.jpeg',
                     ]
                 },
                 details: [],
@@ -218,7 +218,7 @@ const cars = [
         ]
     },
     {
-        currentPage: 1,
+        currentPage: 2,
         lastPage: 2,
         totalItems: 10,
         items: [
@@ -234,13 +234,13 @@ const cars = [
                 kilometres: 102000,
                 images: {
                     interior: [
-                        'cars/9/4.jpg',
-                        'cars/9/5.jpg',
+                        'cars/9/interior/4.jpeg',
+                        'cars/9/interior/5.jpeg',
                     ],
                     exterior: [
-                        'cars/9/1.jpg',
-                        'cars/9/2.jpg',
-                        'cars/9/3.jpg',
+                        'cars/9/exterior/1.jpeg',
+                        'cars/9/exterior/2.jpeg',
+                        'cars/9/exterior/3.jpeg',
                     ]
                 },
                 details: [],
@@ -260,13 +260,13 @@ const cars = [
                 kilometres: 87000,
                 images: {
                     interior: [
-                        'cars/10/4.jpg',
-                        'cars/10/5.jpg',
+                        'cars/10/interior/4.jpeg',
+                        'cars/10/interior/5.jpeg',
                     ],
                     exterior: [
-                        'cars/10/1.jpg',
-                        'cars/10/2.jpg',
-                        'cars/10/3.jpg',
+                        'cars/10/exterior/1.jpeg',
+                        'cars/10/exterior/2.jpeg',
+                        'cars/10/exterior/3.jpeg',
                     ]
                 },
                 details: [],

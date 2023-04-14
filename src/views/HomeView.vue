@@ -18,7 +18,7 @@ export default {
       reviews: [
         {
           id: 1,
-          photo: 'reviews/1.jpg',
+          photo: 'reviews/1.jpeg',
           name: 'Laura Chaisson',
           text: 'In irure et ipsum eiusmod adipisicing id elit cillum proident. ' +
               'Adipisicing ullamco nisi veniam occaecat id excepteur ad non. Sunt occaecat elit ullamco commodo exercitation.' +
@@ -26,7 +26,7 @@ export default {
         },
         {
           id: 2,
-          photo: 'reviews/1.jpg',
+          photo: 'reviews/1.jpeg',
           name: 'Laura',
           text: 'In irure et ipsum eiusmod adipisicing id elit cillum proident. ' +
               'Adipisicing ullamco nisi veniam occaecat id excepteur ad non. Sunt occaecat elit ullamco commodo exercitation.' +
@@ -39,7 +39,7 @@ export default {
         },
         {
           id: 3,
-          photo: 'reviews/1.jpg',
+          photo: 'reviews/1.jpeg',
           name: 'Chaisson',
           text: 'In irure et ipsum eiusmod adipisicing id elit cillum proident. ' +
               ' Anim mollit irure Lorem proident veniam excepteur non irure Lorem. Lorem esse sint in nisi id esse.'
@@ -49,21 +49,21 @@ export default {
       interestingArticles: [
         {
           id: 1,
-          img: 'blog/1.jpg',
+          img: 'blog/1.jpeg',
           title: 'How to save on buying a car? Why is it better to buy from us',
           text: 'lorem ipsum',
           date: '10 May, 2020'
         },
         {
           id: 2,
-          img: 'blog/2.jpg',
+          img: 'blog/2.jpeg',
           title: 'How fast can you order a car in Canada?',
           text: 'lorem ipsum',
           date: '10 May, 2020'
         },
         {
           id: 3,
-          img: 'blog/3.jpg',
+          img: 'blog/3.jpeg',
           title: 'How to save on buying a car? Why is it better to buy from us',
           text: 'lorem ipsum',
           date: '10 May, 2020'
