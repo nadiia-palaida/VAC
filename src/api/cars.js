@@ -172,14 +172,14 @@ export const cars = [
                 kilometres: 69000,
                 images: {
                     interior: [
-                        'cars/7/interior/4.jpeg',
-                        'cars/7/interior/5.jpeg',
-                        'cars/7/interior/6.jpeg',
+                        'cars/7/interior/1.jpeg',
+                        'cars/7/interior/2.jpeg',
+                        'cars/7/interior/3.jpeg',
                     ],
                     exterior: [
-                        'cars/7/exterior/1.jpeg',
-                        'cars/7/exterior/2.jpeg',
-                        'cars/7/exterior/3.jpeg',
+                        'cars/7/exterior/4.jpeg',
+                        'cars/7/exterior/5.jpeg',
+                        'cars/7/exterior/6.jpeg',
                     ]
                 },
                 details: [],

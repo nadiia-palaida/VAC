@@ -1,10 +1,12 @@
 .section-cars-catalog {
-  padding-top: 80px;
+  padding: 120px 0 40px 0;
+  min-height: 100%;
 }
 
 .cars-catalog__wrap {
   display: grid;
   grid-template-columns: 30% 70%;
+  min-height: 100%;
 }
 
 .cars-catalog__items {
@@ -13,6 +15,18 @@
   grid-gap: 19px
 }
 
-.car-card__swiper {
-  max-height: 217px;
+.cars-catalog__items-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
+
+.cars-catalog__pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.cars-catalog__items {
+  margin-bottom: 60px;
+}
+

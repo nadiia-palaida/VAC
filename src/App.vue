@@ -16,17 +16,31 @@ export default {
         return ''
       }
     }
-  }
+  },
 }
 </script>
 
 <template>
   <Header/>
 
-  <router-view></router-view>
+  <main id="main">
+    <router-view></router-view>
+  </main>
 
   <component v-if="this.modalComponent" :is="modalComponent" class="modal-component"/>
 
   <Footer/>
 </template>
 
+<style>
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#main {
+  min-height: 100%;
+}
+</style>
