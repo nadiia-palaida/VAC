@@ -19,6 +19,7 @@ export default {
   },
   methods: {
     onChoose(value) {
+      this.onInput(value)
       this.$emit('update:chosenValue', value)
     },
     onInput(value) {

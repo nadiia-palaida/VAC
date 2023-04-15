@@ -28,3 +28,26 @@ export function showBodyScrollbar() {
     document.documentElement.style.overflow = 'auto'
     document.body.style.paddingRight = '0px'
 }
+
+export function doPaginationStructure(carsList) {
+    const showPerPage  = 8
+    const totalItems = carsList.length
+    let lastPage = Math.ceil(carsList.length / showPerPage)
+
+    console.log('lastPage', lastPage)
+
+    let newList = []
+
+    for(let i = 0; i < lastPage; i++) {
+        newList.push({
+            currentPage: i + 1,
+            lastPage: lastPage,
+            totalItems: totalItems,
+            items: [...carsList.slice(i*showPerPage, (i*showPerPage) + showPerPage)]
+        })
+    }
+
+    console.log('newList', newList)
+
+    return newList
+}
