@@ -6,6 +6,7 @@ import router from './router'
 
 import './assets/css/main.scss'
 import './plugins/swiper.js'
+import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css'
 
 const app = createApp(App)
 

@@ -4,10 +4,12 @@ import CarCard from "../components/catalog/CarCard.vue";
 import Pagination from "../components/Pagination.vue";
 import SearchInput from "../components/form/SearchInput.vue";
 import {doPaginationStructure} from "../helpers";
+import ShareButton from "../components/form/ShareButton.vue";
+import FilterNotFound from "../components/catalog/FilterNotFound.vue";
 
 export default {
   name: "CatalogView",
-  components: {SearchInput, Pagination, CarCard},
+  components: {FilterNotFound, ShareButton, SearchInput, Pagination, CarCard},
   data() {
     return {
       cars,
@@ -23,7 +25,7 @@ export default {
       if(!this.filters.search) {
         return this.cars.find(item => item.currentPage === this.activePage)
       } else {
-        return this.filter('name', this.filters.search)
+        return this.filter('name', this.filters.search).find(item => item.currentPage === this.activePage)
       }
     },
     allCars() {
@@ -46,6 +48,9 @@ export default {
 
       return carsMakes.filter(item => item.toLowerCase().match(this.inputSearchValue.toLowerCase()))
     },
+    routeFullPath() {
+      return window.location.href
+    }
   },
   methods: {
     onChangePage(page) {
@@ -53,18 +58,23 @@ export default {
       this.activePage = page
     },
     filter(field, value) {
+      this.activePage = 1
+
       let filterArr = this.allCars.filter(item => {
            return item[field].toString().toLowerCase().match(value.toLowerCase())
           }
       )
-
-      console.log('filterArr', filterArr)
 
       return doPaginationStructure(filterArr)
     },
   },
   mounted() {
     this.$router.push({name: 'catalog', query: {page: this.activePage}})
+  },
+  watch: {
+    filters() {
+      return this.activePage = 1
+    }
   }
 }
 </script>
@@ -80,18 +90,24 @@ export default {
             <div class="cars-catalog__search-wrap">
               <SearchInput v-model:inputValue="inputSearchValue" v-model:chosenValue="filters.search"
                            :items-list="carsMakes" placeholder="Find a dream car..." class="cars-catalog__search"/>
+
+              <ShareButton tooltip="Share search result" :tooltip-width="161" :link="routeFullPath" class="cars-catalog__share-search"/>
             </div>
           </div>
 
-          <div class="cars-catalog__items">
-            <CarCard v-for="(car, carIndex) in activePageCars.items" :car="car" :key="`catalog-car-${carIndex}`"/>
-          </div>
+          <template v-if="activePageCars">
+            <div  class="cars-catalog__items">
+              <CarCard v-for="(car, carIndex) in activePageCars.items" :car="car" :key="`catalog-car-${carIndex}`"/>
+            </div>
 
-          <div v-if="activePage" class="cars-catalog__pagination">
-            <Pagination :modelValue="activePage" @update:modelValue="onChangePage"
-                        :total-items="activePageCars.totalItems"
-                        :current-page="activePageCars.currentPage" :last-page="activePageCars.lastPage"/>
-          </div>
+            <div v-if="activePage" class="cars-catalog__pagination">
+              <Pagination :modelValue="activePage" @update:modelValue="onChangePage"
+                          :total-items="activePageCars.totalItems"
+                          :current-page="activePageCars.currentPage" :last-page="activePageCars.lastPage"/>
+            </div>
+          </template>
+
+          <FilterNotFound v-else/>
         </div>
       </div>
     </div>
