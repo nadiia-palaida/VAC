@@ -12,6 +12,7 @@ export default {
     inputValue: {},
     chosenValue: {},
     itemsList: {type: Array, required: true},
+    isFilter: {type: Boolean, default: false}
   },
   data() {
     return {
@@ -23,6 +24,15 @@ export default {
       this.activeList = false
       this.onInput(value)
       this.$emit('update:chosenValue', value)
+
+   /*   if(!this.isFilter) {
+      } else {
+        if(this.itemsList.includes(value)) {
+          this.$emit('update:chosenValue', value)
+        } else {
+          this.$emit('update:chosenValue', '')
+        }
+      }*/
     },
     onInput(value) {
       this.$emit('update:inputValue', value)

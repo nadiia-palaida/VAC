@@ -1,6 +1,7 @@
 <script>
 import PageTitle from "../components/PageTitle.vue";
 import Collapse from "../components/Collapse.vue";
+
 export default {
   name: "PrivacyView",
   components: {Collapse, PageTitle},
@@ -49,7 +50,9 @@ export default {
       <div class="terms__content">
         <ul class="terms__list">
           <li v-for="item in privacyList" class="terms__list-item">
-            <Collapse :collapse="item"/>
+            <Collapse :title="item.title">
+              <div class="collapse__text text">{{ item.text }}</div>
+            </Collapse>
           </li>
         </ul>
       </div>

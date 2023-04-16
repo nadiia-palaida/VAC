@@ -90,7 +90,9 @@ export default {
       <div class="terms__content">
         <ul class="terms__list">
           <li v-for="item in termsList" class="terms__list-item">
-              <Collapse :collapse="item"/>
+            <Collapse :title="item.title">
+              <div class="collapse__text text">{{ item.text }}</div>
+            </Collapse>
           </li>
         </ul>
       </div>

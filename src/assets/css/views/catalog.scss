@@ -5,8 +5,9 @@
 
 .cars-catalog__wrap {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 300px 70%;
   min-height: 100%;
+  grid-gap: 0 40px;
 }
 
 .cars-catalog__items {
