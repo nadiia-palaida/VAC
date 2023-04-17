@@ -1,12 +1,13 @@
 <script>
-import {cars} from "../api/cars";
-import CarCard from "../components/catalog/CarCard.vue";
-import Pagination from "../components/Pagination.vue";
-import SearchInput from "../components/form/SearchInput.vue";
-import {doPaginationStructure} from "../helpers";
-import ShareButton from "../components/form/ShareButton.vue";
-import FilterNotFound from "../components/catalog/FilterNotFound.vue";
-import Filter from "../components/Filter.vue";
+import {cars} from '../api/cars';
+import CarCard from '../components/catalog/CarCard.vue';
+import Pagination from '../components/Pagination.vue';
+import SearchInput from '../components/form/SearchInput.vue';
+import {doPaginationStructure} from '../helpers';
+import ShareButton from '../components/form/ShareButton.vue';
+import FilterNotFound from '../components/catalog/FilterNotFound.vue';
+import Filter from '../components/Filter.vue';
+import {FILTER_TYPE_SEARCH, FILTER_TYPE_CHECKBOX, FILTER_TYPE_RANGE} from '@/helpers/filterTypes'
 
 const TYPE_SEARCH_MAKE = 'search'
 const TYPE_FILTER_MAKE = 'filter'
@@ -27,7 +28,7 @@ export default {
       },
       filterRules: null,
 
-      TYPE_SEARCH_MAKE, TYPE_FILTER_MAKE
+      TYPE_SEARCH_MAKE, TYPE_FILTER_MAKE,
     }
   },
   computed: {
@@ -108,7 +109,7 @@ export default {
           {
             name: 'make',
             label: 'Make',
-            type: 'search',
+            type: FILTER_TYPE_SEARCH,
             placeholder: 'Search Make...',
             multiple: true,
             searchList: this.carsMakes('filter')
@@ -116,7 +117,7 @@ export default {
           {
             name: 'model',
             label: 'Model',
-            type: 'search',
+            type: FILTER_TYPE_SEARCH,
             placeholder: 'Search Model...',
             multiple: true,
             searchList: this.carModels
@@ -141,7 +142,7 @@ export default {
     <div class="container">
       <div class="cars-catalog__wrap">
         <div class="cars-catalog__filter">
-          <Filter :filter-rule="filterRules.make"/>
+          <Filter :title="filterRules.make.title" :rules="filterRules.make.rules"/>
         </div>
 
         <div class="cars-catalog__items-wrap">

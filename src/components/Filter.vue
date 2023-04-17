@@ -1,16 +1,14 @@
 <script>
 import Collapse from "./Collapse.vue";
 import SearchInput from "./form/SearchInput.vue";
-
-const FILTER_TYPE_SEARCH = 'search'
-const FILTER_TYPE_CHECKBOX = 'checkbox'
-const FILTER_TYPE_RANGE = 'range'
+import {FILTER_TYPE_SEARCH, FILTER_TYPE_CHECKBOX, FILTER_TYPE_RANGE} from '@/helpers/filterTypes'
 
 export default {
   name: "Filter",
   components: {SearchInput, Collapse},
   props: {
-    filterRule: {type: Object, required: true}
+    rules: {type: Object, required: true},
+    title: {type: String}
   },
   data() {
     return {
@@ -24,14 +22,19 @@ export default {
     doFilter(value) {
       this.$emit()
     }
+  },
+  watch: {
+    filterValue() {
+      this.$emit()
+    }
   }
 }
 </script>
 
 <template>
   <div class="filter">
-    <Collapse :title="filterRule.title" size="small">
-      <div v-for="item in filterRule.rules" class="filter__rule">
+    <Collapse :title="title" size="small">
+      <div v-for="item in rules" class="filter__rule">
         <div v-if="item.type === FILTER_TYPE_SEARCH" class="filter__search-input-wrap">
           <div class="filter__search-input-label">{{ item.label }}</div>
           <SearchInput v-model:inputValue="inputSearchValue[item.name]" v-model:chosenValue="filterValue[item.name]" :is-filter="true"
