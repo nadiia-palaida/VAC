@@ -1,14 +1,50 @@
-/*
-.filter {
-  padding: 10px 20px;
-  border: 1px solid #D7D7D7;
-  border-radius: 2px;
-  background: #fff;
-}
-*/
-
 .filter__title {
   font-family: "Gilroy Medium", sans-serif;
   font-size: 16px;
   line-height: 159%;
+}
+
+.filter__search-input-label {
+  font-family: "Gilroy SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 14px;
+  margin-bottom: 10px;
+}
+
+.filter__rule {
+  margin-bottom: 20px;
+
+  &:first-child {
+    margin-top: 30px;
+  }
+
+  &:last-child {
+    margin-bottom: 10px;
+  }
+}
+
+.filter__rule-chosen-list {
+  margin-top: 11px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter__rule-chosen-list-item {
+  padding: 10px;
+  background: rgba(116, 129, 255, 0.2);
+  border-radius: 2px;
+  font-family: "Gilroy Bold", sans-serif;
+  font-size: 16px;
+  line-height: 14px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.filter__rule-chosen-list-item-icon {
+  width: 11px;
+  height: 11px;
+  margin-right: 10px;
 }

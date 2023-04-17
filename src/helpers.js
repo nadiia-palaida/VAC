@@ -34,8 +34,6 @@ export function doPaginationStructure(carsList) {
     const totalItems = carsList.length
     let lastPage = Math.ceil(carsList.length / showPerPage)
 
-    console.log('lastPage', lastPage)
-
     let newList = []
 
     for(let i = 0; i < lastPage; i++) {
@@ -46,8 +44,6 @@ export function doPaginationStructure(carsList) {
             items: [...carsList.slice(i*showPerPage, (i*showPerPage) + showPerPage)]
         })
     }
-
-    console.log('newList', newList)
 
     return newList
 }

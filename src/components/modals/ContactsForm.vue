@@ -27,10 +27,7 @@ const isValidForm = useIsFormValid()
 async function onSubmit() {
   const contactsFormValidate = await validate();
 
-  console.log('onSubmit', await validate())
-
   if(contactsFormValidate.valid) {
-    console.log('form is valid')
     emit('onSubmitEvent')
   }
 }

@@ -173,8 +173,12 @@
         <path d="M76.8447 15H88.8447" stroke="#41456B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M76.8447 21H80.6342" stroke="#41456B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
-</svg>
 
+    <symbol viewBox="0 0 11 11" id="filter-cross" fill="none">
+        <path d="M1.375 1.375L9.62496 9.62513" stroke="#7481FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.625 1.375L1.37504 9.62513" stroke="#7481FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+</svg>
 
 
 

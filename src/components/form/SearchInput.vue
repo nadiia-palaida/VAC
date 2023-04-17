@@ -22,17 +22,17 @@ export default {
   methods: {
     onChoose(value) {
       this.activeList = false
-      this.onInput(value)
-      this.$emit('update:chosenValue', value)
-
-   /*   if(!this.isFilter) {
+      if (!this.isFilter) {
+        this.onInput(value)
+        this.$emit('update:chosenValue', value)
       } else {
-        if(this.itemsList.includes(value)) {
+        if (this.itemsList.includes(value)) {
+          this.onInput(value)
           this.$emit('update:chosenValue', value)
         } else {
           this.$emit('update:chosenValue', '')
         }
-      }*/
+      }
     },
     onInput(value) {
       this.$emit('update:inputValue', value)
@@ -49,15 +49,16 @@ export default {
 <template>
   <div @click.stop class="search-input">
     <div class="search-input__wrap">
-      <input @input="onInput($event.target.value)" @change="onChoose($event.target.value)" @focus="activeList = true"
-             :value="inputValue"
+      <input @input="onInput($event.target.value)" @focus="activeList = true"
+             :value="inputValue" @keydown="activeList = true"
              @keyup.enter="onChoose($event.target.value)" type="text" :placeholder="placeholder"
              class="search-input__item">
 
       <Icon src="search" class="search-input__icon"/>
     </div>
 
-    <div v-if="activeList && itemsList.length" class="search-input__list-wrap">
+    <div v-if="activeList && itemsList.length" class="search-input__list-wrap"
+         :class="{'search-input__list-wrap_filter': isFilter}">
       <perfect-scrollbar>
         <ul class="search-input__list">
           <li v-for="item in itemsList" class="search-input__list-item">

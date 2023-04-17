@@ -1,104 +1,54 @@
 <script>
-import {cars} from '../api/cars';
 import CarCard from '../components/catalog/CarCard.vue';
 import Pagination from '../components/Pagination.vue';
 import SearchInput from '../components/form/SearchInput.vue';
-import {doPaginationStructure} from '../helpers';
 import ShareButton from '../components/form/ShareButton.vue';
 import FilterNotFound from '../components/catalog/FilterNotFound.vue';
 import Filter from '../components/Filter.vue';
 import {FILTER_TYPE_SEARCH, FILTER_TYPE_CHECKBOX, FILTER_TYPE_RANGE} from '@/helpers/filterTypes'
+import {
+  FILTER_NAME_MAKE, FILTER_NAME_MODEL, FILTER_NAME_BODY_TYPE, FILTER_NAME_TRANSMISSION,
+  FILTER_NAME_PRICE, FILTER_NAME_YEAR, FILTER_NAME_KILOMETRES
+} from '@/helpers/filterNames'
 
-const TYPE_SEARCH_MAKE = 'search'
-const TYPE_FILTER_MAKE = 'filter'
+import Collapse from "../components/Collapse.vue";
+
+
+import { mapWritableState, mapState, mapActions } from 'pinia'
+import { useCarsStore } from '@/store/cars'
 
 export default {
   name: "CatalogView",
-  components: {Filter, FilterNotFound, ShareButton, SearchInput, Pagination, CarCard},
+  components: {Collapse, Filter, FilterNotFound, ShareButton, SearchInput, Pagination, CarCard},
+  provide() {
+    return {
+      deleteFilterHandler: this.deleteFilter
+    }
+  },
   data() {
     return {
-      cars,
       activePage: 1,
-      inputSearchValue: '',
-
-      filters: {
-        search: '',
-        make: [],
-        model: [],
-      },
-      filterRules: null,
-
-      TYPE_SEARCH_MAKE, TYPE_FILTER_MAKE,
     }
   },
   computed: {
-    activePageCars() {
-      if (!this.filters.search) {
-        return this.cars.find(item => item.currentPage === this.activePage)
-      } else {
-        return this.filter('name', this.filters.search).find(item => item.currentPage === this.activePage)
-      }
-    },
-    allCars() {
-      const allCars = []
+    ...mapWritableState(useCarsStore, ['inputSearchValue', 'filters', 'filterRules']),
+    ...mapState(useCarsStore, ['allCars', 'carModels', 'activePageCars']),
 
-      this.cars.forEach(item => {
-        allCars.push(...item.items)
-      })
-
-      return allCars
-    },
-
-    carModels() {
-      let carModels = []
-
-      this.allCars.filter(item => {
-        if (item.make === this.filters.make) {
-          carModels.push(item.model)
-        }
-      })
-
-      return carModels
-    },
     routeFullPath() {
       return window.location.href
     }
   },
   methods: {
+    ...mapActions(useCarsStore, ['doFilter', 'carsMakes', 'addFilter', 'allRulesChosenValues', 'deleteFilter']),
+
     onChangePage(page) {
       this.$router.push({name: 'catalog', query: {page: page}})
       this.activePage = page
     },
-    filter(field, value) {
+
+    filterProxy(field, value) {
       this.activePage = 1
-
-      let filterArr = this.allCars.filter(item => {
-            return item[field].toString().toLowerCase().match(value.toLowerCase())
-          }
-      )
-
-      return doPaginationStructure(filterArr)
-    },
-    carsMakes(type) {
-      let carsMakes = []
-
-      this.allCars.forEach(item => {
-        carsMakes.push(item.make)
-      })
-
-      carsMakes = [...new Set(carsMakes)]
-
-      if (type === TYPE_SEARCH_MAKE) {
-        return carsMakes.filter(item => item.toLowerCase().match(this.inputSearchValue.toLowerCase()))
-      } else {
-        return carsMakes.filter(item => {
-          if (this.filters.make.length) {
-            return item.toLowerCase().match(this.filters.make[this.filters.make.lastIndex - 1].toLowerCase())
-          } else {
-            return carsMakes.filter(item => item.toLowerCase().match(this.inputSearchValue.toLowerCase()))
-          }
-        })
-      }
+      this.doFilter(field, value)
     },
   },
   beforeMount() {
@@ -107,7 +57,7 @@ export default {
         title: 'Make, Model',
         rules: [
           {
-            name: 'make',
+            name: FILTER_NAME_MAKE,
             label: 'Make',
             type: FILTER_TYPE_SEARCH,
             placeholder: 'Search Make...',
@@ -115,7 +65,7 @@ export default {
             searchList: this.carsMakes('filter')
           },
           {
-            name: 'model',
+            name: FILTER_NAME_MODEL,
             label: 'Model',
             type: FILTER_TYPE_SEARCH,
             placeholder: 'Search Model...',
@@ -131,7 +81,7 @@ export default {
   },
   watch: {
     filters() {
-      return this.activePage = 1
+      this.activePage = 1
     }
   }
 }
@@ -142,7 +92,11 @@ export default {
     <div class="container">
       <div class="cars-catalog__wrap">
         <div class="cars-catalog__filter">
-          <Filter :title="filterRules.make.title" :rules="filterRules.make.rules"/>
+          <div v-for="(item, itemIndex) in filterRules" class="filter">
+            <Collapse :title="item.title" :filter-list="allRulesChosenValues(item.rules)" size="small">
+              <Filter v-for="rule in item.rules" :rule="rule" @filter="addFilter" :chosen-list="allRulesChosenValues([rule])"/>
+            </Collapse>
+          </div>
         </div>
 
         <div class="cars-catalog__items-wrap">
@@ -157,15 +111,15 @@ export default {
             </div>
           </div>
 
-          <template v-if="activePageCars">
+          <template v-if="activePageCars(activePage)">
             <div class="cars-catalog__items">
-              <CarCard v-for="(car, carIndex) in activePageCars.items" :car="car" :key="`catalog-car-${carIndex}`"/>
+              <CarCard v-for="(car, carIndex) in activePageCars(activePage).items" :car="car" :key="`catalog-car-${carIndex}`"/>
             </div>
 
             <div v-if="activePage" class="cars-catalog__pagination">
               <Pagination :modelValue="activePage" @update:modelValue="onChangePage"
-                          :total-items="activePageCars.totalItems"
-                          :current-page="activePageCars.currentPage" :last-page="activePageCars.lastPage"/>
+                          :total-items="activePageCars(activePage).totalItems"
+                          :current-page="activePageCars(activePage).currentPage" :last-page="activePageCars(activePage).lastPage"/>
             </div>
           </template>
 
