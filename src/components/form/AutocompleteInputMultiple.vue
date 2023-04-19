@@ -3,7 +3,7 @@ import Icon from "../Icon.vue";
 import {PerfectScrollbar} from 'vue3-perfect-scrollbar'
 
 export default {
-  name: "AutocompleteInput",
+  name: "AutocompleteInputMultiple",
   components: {Icon, PerfectScrollbar},
   emits: ['update:value'],
   props: {
@@ -12,7 +12,6 @@ export default {
     autocompleteData: {type: Array, required: true},
     value: {},
     absolute: {type: Boolean, default: true},
-    multiple: {type: Boolean, default: false}
   },
   data() {
     return {
@@ -22,50 +21,40 @@ export default {
   },
   computed: {
     getAutocompleteData() {
-      if(!this.multiple) {
-        return this.autocompleteData.filter(item => item.toLowerCase().match(this.localValue.toLowerCase()))
-      } else {
-        return this.autocompleteData.filter(item => !this.value.includes(item) && item.toLowerCase().match(this.localValue.toLowerCase()))
-      }
+      return this.autocompleteData.filter(item => !this.value.includes(item) && item.toLowerCase().match(this.localValue.toLowerCase()))
     }
   },
   methods: {
     onInput(value) {
-      if (!this.multiple) {
-        this.$emit('update:value', value)
-      }
       this.localValue = value
     },
     onEnter(value) {
-      if (this.multiple) {
-        if (this.autocompleteData.includes(value)) {
-          if (!this.value.includes(value)) {
-            this.$emit('update:value', [...this.value, value])
-          }
+      if (this.autocompleteData.includes(value)) {
+        if (!this.value.includes(value)) {
+          this.$emit('update:value', [...this.value, value])
         }
       }
     },
     select(value) {
-      if (!this.multiple) {
-        this.$emit('update:value', value)
-        this.localValue = value
-      } else {
-        if (!this.value.includes(value)) {
-          this.$emit('update:value', [...this.value, value])
-        }
-        this.localValue = ''
+      if (!this.value.includes(value)) {
+        this.$emit('update:value', [...this.value, value])
       }
+      this.localValue = ''
       this.activeList = false
+    },
+    deleteValue(value) {
+      this.$emit('update:value', [...this.value.filter(item => item !== value)])
     }
   },
   mounted() {
-    if (!this.multiple) {
-      this.localValue = this.value
-    }
-
     window.addEventListener('click', () => {
       this.activeList = false
     })
+  },
+  watch: {
+    autocompleteData() {
+      this.$emit('update:value', [...this.value.filter(item => this.autocompleteData.includes(item))])
+    }
   }
 }
 </script>
@@ -91,5 +80,14 @@ export default {
         </ul>
       </perfect-scrollbar>
     </div>
+
+    <ul v-if="value.length" class="filter__rule-chosen-list">
+        <li v-for="itemFilter in value" class="filter__rule-chosen-list-item">
+          <button @click="deleteValue(itemFilter)" class="filter__rule-chosen-list-item-btn">
+            <Icon src="filter-cross" class="filter__rule-chosen-list-item-icon"/>
+            <span class="filter__rule-chosen-list-item-name">{{ itemFilter }}</span>
+          </button>
+        </li>
+    </ul>
   </div>
 </template>

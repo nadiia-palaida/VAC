@@ -1,12 +1,11 @@
 <script>
 import SlideUpDown from 'vue3-slide-up-down'
-import FilterList from "./FilterList.vue";
 
 const SIZE_SMALL = 'small'
 
 export default {
   name: "Collapse",
-  components: {FilterList, SlideUpDown},
+  components: {SlideUpDown},
   props: {
     title: {type: String, required: true},
     size: {type: String},
@@ -35,15 +34,14 @@ export default {
 </script>
 
 <template>
-  <div @click="toggleActive" class="collapse" :class="collapseClasses">
+  <div class="collapse" :class="collapseClasses">
     <div class="collapse__title-wrap">
-      <div class="collapse__title title-text"> {{ title }}</div>
+      <div @click="toggleActive"  class="collapse__title title-text"> {{ title }}</div>
 
-      <FilterList v-if="filterList.length && !this.active" :list="filterList" class="collapse__list"
-                  :class="{'collapse__list_active': filterList.length}"/>
+      <slot v-if="!active" name="header"></slot>
     </div>
 
-    <slide-up-down @click.stop v-model="active" :duration="1000">
+    <slide-up-down @click.stop v-model="active" :duration="1000" class="collapse__slide">
       <slot></slot>
     </slide-up-down>
   </div>

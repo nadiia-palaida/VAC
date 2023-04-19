@@ -28,7 +28,7 @@ export default {
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
       return parts.join(".");
     }
-  },
+  }
 }
 </script>
 
@@ -54,7 +54,7 @@ export default {
         <li v-if="car.year" class="car-card__info-list-item text">{{ car.year }} year</li>
         <li v-if="car.bodyType" class="car-card__info-list-item text">{{ car.bodyType }}</li>
         <li v-if="car.transmission" class="car-card__info-list-item text"> {{ car.transmission }}</li>
-        <li v-if="car.kilometres" class="car-card__info-list-item text"> {{ car.kilometres }}</li>
+        <li v-if="car.kilometres" class="car-card__info-list-item text"> {{ car.kilometres }} kilometres</li>
       </ul>
     </div>
   </div>

@@ -33,13 +33,17 @@
 }
 
 .collapse_small {
-  padding: 10px 20px;
+  padding: 11px 20px;
   border-radius: 2px;
 
   .collapse__title {
     font-family: "Gilroy Medium", sans-serif;
     font-size: 16px;
     line-height: 159%;
+
+    &::after {
+      right: -5px;
+    }
   }
 }
 
@@ -69,6 +73,10 @@
   margin-top: 11px;
   padding-bottom: 9px;
   padding-right: 65px;
+}
+
+.collapse__slide {
+  overflow: hidden;
 }
 
 @media screen and (max-width: 991px) {
@@ -108,5 +116,9 @@
     &::after {
       top: 10px;
     }
+  }
+
+  .collapse_small {
+    padding: 10px 20px;
   }
 }

@@ -3,7 +3,7 @@ import Icon from "../Icon.vue";
 import {PerfectScrollbar} from 'vue3-perfect-scrollbar'
 
 export default {
-  name: "SearchInput",
+  name: "AutocompleteInput",
   components: {Icon, PerfectScrollbar},
   emits: ['update:value'],
   props: {
@@ -11,24 +11,32 @@ export default {
     name: {type: String, default: 'search'},
     autocompleteData: {type: Array, required: true},
     value: {},
-    isFilter: {type: Boolean, default: false}
+    absolute: {type: Boolean, default: false},
   },
   data() {
     return {
+      localValue: '',
       activeList: false
     }
   },
   computed: {
     getAutocompleteData() {
-      return this.autocompleteData.filter(item => item.toLowerCase().match(this.value.toLowerCase()))
+      return this.autocompleteData.filter(item => item.toLowerCase().match(this.localValue.toLowerCase()))
     }
   },
   methods: {
     onInput(value) {
       this.$emit('update:value', value)
+      this.localValue = value
+    },
+    select(value) {
+      this.$emit('update:value', value)
+      this.localValue = value
+      this.activeList = false
     }
   },
   mounted() {
+    this.localValue = this.value
     window.addEventListener('click', () => {
       this.activeList = false
     })
@@ -39,19 +47,19 @@ export default {
 <template>
   <div @click.stop class="search-input">
     <div class="search-input__wrap">
-      <input @input="onInput($event.target.value)" @focus="activeList = true" :value="value"
-            @keydown="activeList = true" type="text" :placeholder="placeholder"
+      <input @input="onInput($event.target.value)" @focus="activeList = true" :value="localValue"
+             @keydown="activeList = true" type="text" :placeholder="placeholder"
              class="search-input__item">
 
       <Icon src="search" class="search-input__icon"/>
     </div>
 
     <div v-if="activeList && getAutocompleteData.length" class="search-input__list-wrap"
-         :class="{'search-input__list-wrap_filter': isFilter}">
+         :class="{'search-input__list-wrap_absolute': absolute}">
       <perfect-scrollbar>
         <ul class="search-input__list">
           <li v-for="item in getAutocompleteData" class="search-input__list-item">
-            <button @click="onInput(item)" class="search-input__list-btn">{{ item }}</button>
+            <button @click="select(item)" class="search-input__list-btn">{{ item }}</button>
           </li>
         </ul>
       </perfect-scrollbar>

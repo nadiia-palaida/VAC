@@ -134,17 +134,5 @@ export default {
 </style>
 
 <style lang="scss">
-.slider-range {
-  --slider-height: 8px;
-  --slider-bg: #D7D7D7;
-  --slider-radius: 2px;
-  --slider-connect-bg: #7481FF;
-  --slider-handle-bg: #7481FF;
-  --slider-handle-border: 1px solid #fff;
-  --slider-handle-radius: 2px;
-  --slider-handle-ring-width: 0px;
-  --slider-handle-width: 18px;
-  --slider-handle-height: 18px;
-  --slider-handle-shadow: none;
-}
+
 </style>

@@ -14,10 +14,10 @@
 
 .car-card__carousel-wrap {
   .swiper-pagination-progressbar {
-    top: 95% !important;
+    top: 96% !important;
     left: 50%!important;
     transform: translateX(-50%)!important;
-    max-width: 95%!important;
+    width: 90%!important;
     background: rgba(255, 255, 255, .2)!important;
     border-radius: 28px!important;
   }
@@ -120,5 +120,22 @@
     display: block;
     background: #D7D7D7;
     border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .car-card__info-list {
+    padding: 0 10px;
+  }
+
+  .car-card__info-list-item {
+    padding: 0 10px;
+
+    &::after {
+      width: 1px;
+      height: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }
