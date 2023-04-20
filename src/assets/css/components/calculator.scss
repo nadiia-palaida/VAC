@@ -82,6 +82,12 @@
   color: $primary-accent;
 }
 
+.calculator__slider-custom {
+  width: 100%;
+  height: 1px;
+  background: #D7D7D7;
+}
+
 @media screen and (max-width: 991px) {
   .calculator {
     box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1);

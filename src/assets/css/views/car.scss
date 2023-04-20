@@ -153,6 +153,19 @@
   margin-bottom: 20px;
 }
 
+.car-page-info__carousel2-swiper-slide {
+  &.swiper-slide-thumb-active {
+    border: 2px solid #7481FF;
+    border-radius: 2px;
+  }
+}
+
 .car-page-info__detail-btn-more {
   min-width: 280px;
+}
+
+.car-page__calculator-title {
+  max-width: 55%;
+  margin-bottom: 60px;
+
 }

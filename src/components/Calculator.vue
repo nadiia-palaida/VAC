@@ -15,6 +15,10 @@ const TYPE_GOOD = 'good'
 export default {
   name: "Calculator",
   components: {Tabs, Slider},
+  props: {
+    newPrice: {type: Number},
+    buttonTitle: {type: String}
+  },
   data() {
     return {
       tabsTypesList: [
@@ -35,8 +39,8 @@ export default {
       MIN_PRICE, MAX_PRICE, MIN_DURATION, MAX_DURATION,
       TYPE_POOR, TYPE_AVERAGE, TYPE_GOOD,
 
-      activeType: null,
-      price: MIN_PRICE,
+      activeType: TYPE_POOR,
+      price: this.newPrice || MIN_PRICE,
       duration: 18
     }
   },
@@ -57,13 +61,13 @@ export default {
   watch: {
     activeType(newActiveType) {
       if (newActiveType === TYPE_POOR) {
-        this.price = 150000
+        this.price = this.newPrice || 150000
         this.duration = 18
       } else if (newActiveType === TYPE_AVERAGE) {
-        this.price = 400000
+        this.price = this.newPrice || 400000
         this.duration = 30
       } else if (newActiveType === TYPE_GOOD) {
-        this.price = 550000
+        this.price = this.newPrice || 550000
         this.duration = 48
       }
     }
@@ -85,7 +89,9 @@ export default {
             <div class="calculator__ranges-item-value title-text">$ {{ price }}</div>
           </div>
 
-          <Slider v-model="price" :min="MIN_PRICE" :max="MAX_PRICE" :tooltips="false" :lazy="false"
+          <div v-if="newPrice" class="calculator__slider-custom"></div>
+
+          <Slider v-else v-model="price" :min="MIN_PRICE" :max="MAX_PRICE" :tooltips="false" :lazy="false"
                   class="slider-range"/>
         </div>
 
@@ -124,7 +130,7 @@ export default {
         </div>
       </div>
 
-      <router-link :to="{name: 'quiz'}" class="calculator__btn-request btn btn_solid">Request a car</router-link>
+      <router-link :to="{name: 'quiz'}" class="calculator__btn-request btn btn_solid">{{ buttonTitle || 'Request a car' }}</router-link>
     </div>
   </div>
 </template>
