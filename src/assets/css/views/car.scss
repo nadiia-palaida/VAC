@@ -96,3 +96,63 @@
     color: #fff;
   }
 }
+
+.car-page-info__detail-parameters {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #D7D7D7;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.car-page-info__detail-list-item-label {
+  font-family: "Gilroy Medium", sans-serif;
+  font-size: 16px;
+  line-height: 159%;
+  color: $secondary-text
+}
+
+.car-page-info__detail-list-item-number {
+  font-family: "Gilroy Bold", sans-serif;
+  font-size: 25px;
+  line-height: 140%;
+  text-transform: capitalize;
+}
+
+.car-page-info__detail-list-item-number_color {
+  color: $primary-accent;
+}
+
+.car-page-info__detail-list-item {
+  margin-bottom: 20px;
+}
+
+.car-page-info__detail-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 20px;
+}
+
+.car-page-info__detail-additional-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.car-page-info__detail-description-title {
+  font-family: "Gilroy Medium", sans-serif;
+  font-size: 16px;
+  line-height: 159%;
+  color: $secondary-text;
+  margin-bottom: 20px;
+}
+
+.car-page-info__detail-btn-more {
+  min-width: 280px;
+}

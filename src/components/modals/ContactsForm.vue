@@ -1,5 +1,5 @@
 <script setup>
-import {reactive, computed} from 'vue'
+import {reactive, computed, onMounted} from 'vue'
 import InputComponent from "../form/InputComponent.vue"
 import '../../plugins/vee-validate'
 import {useModalStore} from "../../store/modal";
@@ -31,6 +31,12 @@ async function onSubmit() {
     emit('onSubmitEvent')
   }
 }
+
+onMounted(() => {
+  if(modalData && modalData.value.name) {
+    userData.vehicle = modalData.value.name
+  }
+})
 </script>
 
 <template>

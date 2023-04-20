@@ -2,10 +2,13 @@
 import {carItems} from "../api/carsList";
 import Icon from "../components/Icon.vue";
 import ShareButton from "../components/form/ShareButton.vue";
+import {mapActions} from "pinia";
+import {useModalStore} from "../store/modal";
+import CalculatorSection from "../components/CalculatorSection.vue";
 
 export default {
   name: "CarView",
-  components: {ShareButton, Icon},
+  components: {CalculatorSection, ShareButton, Icon},
   data() {
     return {
       showImagesInterior: false
@@ -23,6 +26,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions(useModalStore, ['openModal']),
     getImgFileUrl(imgUrl) {
       return new URL(`../assets/imgs/${imgUrl}`, import.meta.url).href
     },
@@ -30,6 +34,9 @@ export default {
       let parts = price.toString().split(".");
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
       return parts.join(".");
+    },
+    openContactsForm() {
+      this.openModal({component: 'ContactsModal', data: {name: this.car.name}})
     }
   },
   mounted() {
@@ -39,7 +46,7 @@ export default {
 
 <template>
   <div class="car-page">
-    <section class="car-page-info">
+    <section class="car-page-info section">
       <div class="container">
         <h1 class="car-page-info__title title-2">{{ car.name }}</h1>
 
@@ -102,13 +109,55 @@ export default {
           </div>
 
           <div class="car-page-info__detail">
-            <div class="car-page-info__detail-price">
-              <div class="car-page-info__detail-price-label">Price</div>
-              <div class="car-page-info__detail-price-number">${{ formatPrice(item.price) }}</div>
+            <div>
+              <div class="car-page-info__detail-parameters">
+                <div class="car-page-info__detail-list-item">
+                  <div class="car-page-info__detail-list-item-label">Price</div>
+                  <div class="car-page-info__detail-list-item-number car-page-info__detail-list-item-number_color">
+                    ${{ formatPrice(car.price) }}
+                  </div>
+                </div>
+                <ul class="car-page-info__detail-list">
+                  <li class="car-page-info__detail-list-item">
+                    <div class="car-page-info__detail-list-item-label">Body</div>
+                    <div class="car-page-info__detail-list-item-number">{{ car.bodyType }}</div>
+                  </li>
+                  <li class="car-page-info__detail-list-item">
+                    <div class="car-page-info__detail-list-item-label">Year</div>
+                    <div class="car-page-info__detail-list-item-number">{{ car.year }}</div>
+                  </li>
+                  <li class="car-page-info__detail-list-item">
+                    <div class="car-page-info__detail-list-item-label">Transmission</div>
+                    <div class="car-page-info__detail-list-item-number">{{ car.transmission }}</div>
+                  </li>
+                  <li class="car-page-info__detail-list-item">
+                    <div class="car-page-info__detail-list-item-label">Kilometres</div>
+                    <div class="car-page-info__detail-list-item-number">{{ formatPrice(car.kilometres) }}</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div v-if="car.details.length" class="car-page-info__detail-parameters">
+                <ul class="car-page-info__detail-additional-list">
+                  <li v-for="item in car.details" class="car-page-info__detail-additional-list-item title-text">
+                    {{ item }}
+                  </li>
+                </ul>
+              </div>
+
+              <div v-if="car.description.paragraphs.length" class="car-page-info__detail-parameters">
+                <div class="car-page-info__detail-description-title">Description</div>
+
+                <p v-for="item in car.description.paragraphs" class="text">{{ item }}</p>
+              </div>
             </div>
+
+            <button @click="openContactsForm" class="car-page-info__detail-btn-more btn btn_solid">Request more information</button>
           </div>
         </div>
       </div>
     </section>
+
+    <CalculatorSection/>
   </div>
 </template>

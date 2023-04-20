@@ -28,9 +28,21 @@ export const carItems = [
                 'cars/1/exterior/4.jpeg',
             ]
         },
-        details: [],
+        details: [
+            'Rear wheel drive',
+            '6 cylinders',
+            '11 l. per 100 km.',
+            'Rear wheel drive',
+            '2500-4000 rpm',
+            '0-100 in 2.7 s.',
+            'Power steering',
+            '2500-4000 rpm'
+        ],
         description: {
-            paragraphs: []
+            paragraphs: [
+                'Porsche 911 - a sports car manufactured by the German company Porsche AG in the back of a two-door coupe or a convertible based on it, produced in different generations from 1964 to the present day.',
+                'The 911 index was not originally planned for the timeless designation of different generations of the same car, and was no more than one of many similar in the through three-digit internal factory numbering of all Porsche models assigned to a very specific 1964 model.'
+            ]
         },
         date: '04.01.2023'
     },
@@ -54,9 +66,18 @@ export const carItems = [
                 'cars/2/exterior/2.jpeg',
             ]
         },
-        details: [],
+        details: [
+            'Rear wheel drive',
+            '6 cylinders',
+            '11 l. per 100 km.',
+            '0-100 in 2.7 s.',
+            '2500-4000 rpm'
+        ],
         description: {
-            paragraphs: []
+             paragraphs: [
+                'Porsche 911 - a sports car manufactured by the German company Porsche AG in the back of a two-door coupe or a convertible based on it, produced in different generations from 1964 to the present day.',
+                'The 911 index was not originally planned for the timeless designation of different generations of the same car, and was no more than one of many similar in the through three-digit internal factory numbering of all Porsche models assigned to a very specific 1964 model.'
+            ]
         },
         date: '04.15.2023'
     },
@@ -80,9 +101,17 @@ export const carItems = [
                 'cars/3/exterior/1.jpeg',
             ]
         },
-        details: [],
+        details: [
+            '11 l. per 100 km.',
+            'Rear wheel drive',
+            '2500-4000 rpm',
+            '0-100 in 2.7 s.',
+            'Power steering',
+        ],
         description: {
-            paragraphs: []
+             paragraphs: [
+                'Porsche 911 - a sports car manufactured by the German company Porsche AG in the back of a two-door coupe or a convertible based on it, produced in different generations from 1964 to the present day.',
+            ]
         },
         date: '04.13.2023'
     },
@@ -104,9 +133,15 @@ export const carItems = [
                 'cars/4/exterior/3.jpeg',
             ]
         },
-        details: [],
+        details: [
+            '11 l. per 100 km.',
+            'Rear wheel drive',
+        ],
         description: {
-            paragraphs: []
+             paragraphs: [
+                'Porsche 911 - a sports car manufactured by the German company Porsche AG in the back of a two-door coupe or a convertible based on it, produced in different generations from 1964 to the present day.',
+                'The 911 index was not originally planned for the timeless designation of different generations of the same car, and was no more than one of many similar in the through three-digit internal factory numbering of all Porsche models assigned to a very specific 1964 model.'
+            ]
         },
         date: '04.19.2023'
     },
@@ -135,7 +170,10 @@ export const carItems = [
         },
         details: [],
         description: {
-            paragraphs: []
+             paragraphs: [
+                'Porsche 911 - a sports car manufactured by the German company Porsche AG in the back of a two-door coupe or a convertible based on it, produced in different generations from 1964 to the present day.',
+                'The 911 index was not originally planned for the timeless designation of different generations of the same car, and was no more than one of many similar in the through three-digit internal factory numbering of all Porsche models assigned to a very specific 1964 model.'
+            ]
         },
         date: '04.11.2023'
     },
@@ -161,9 +199,20 @@ export const carItems = [
                 'cars/6/exterior/2.jpeg',
             ]
         },
-        details: [],
+        details: [
+            'Rear wheel drive',
+            '6 cylinders',
+            '11 l. per 100 km.',
+            'Rear wheel drive',
+            '2500-4000 rpm',
+            '0-100 in 2.7 s.',
+            'Power steering',
+            '2500-4000 rpm'
+        ],
         description: {
-            paragraphs: []
+             paragraphs: [
+                'The 911 index was not originally planned for the timeless designation of different generations of the same car, and was no more than one of many similar in the through three-digit internal factory numbering of all Porsche models assigned to a very specific 1964 model.'
+            ]
         },
         date: '04.03.2023'
     },
@@ -189,9 +238,17 @@ export const carItems = [
                 'cars/7/exterior/6.jpeg',
             ]
         },
-        details: [],
+        details: [
+            'Rear wheel drive',
+            '6 cylinders',
+            '11 l. per 100 km.',
+            '2500-4000 rpm'
+        ],
         description: {
-            paragraphs: []
+             paragraphs: [
+                'Porsche 911 - a sports car manufactured by the German company Porsche AG in the back of a two-door coupe or a convertible based on it, produced in different generations from 1964 to the present day.',
+                'The 911 index was not originally planned for the timeless designation of different generations of the same car, and was no more than one of many similar in the through three-digit internal factory numbering of all Porsche models assigned to a very specific 1964 model.'
+            ]
         },
         date: '04.17.2023'
     },
@@ -220,7 +277,10 @@ export const carItems = [
         },
         details: [],
         description: {
-            paragraphs: []
+             paragraphs: [
+                'Porsche 911 - a sports car manufactured by the German company Porsche AG in the back of a two-door coupe or a convertible based on it, produced in different generations from 1964 to the present day.',
+                'The 911 index was not originally planned for the timeless designation of different generations of the same car, and was no more than one of many similar in the through three-digit internal factory numbering of all Porsche models assigned to a very specific 1964 model.'
+            ]
         },
         date: '04.11.2023'
     },
@@ -247,7 +307,8 @@ export const carItems = [
         },
         details: [],
         description: {
-            paragraphs: []
+             paragraphs: [
+            ]
         },
         date: '04.19.2023'
     },
@@ -272,9 +333,18 @@ export const carItems = [
                 'cars/10/exterior/3.jpeg',
             ]
         },
-        details: [],
+        details: [
+            'Rear wheel drive',
+            '2500-4000 rpm',
+            '0-100 in 2.7 s.',
+            'Power steering',
+            '2500-4000 rpm'
+        ],
         description: {
-            paragraphs: []
+             paragraphs: [
+                'Porsche 911 - a sports car manufactured by the German company Porsche AG in the back of a two-door coupe or a convertible based on it, produced in different generations from 1964 to the present day.',
+                'The 911 index was not originally planned for the timeless designation of different generations of the same car, and was no more than one of many similar in the through three-digit internal factory numbering of all Porsche models assigned to a very specific 1964 model.'
+            ]
         },
         date: '04.01.2023'
     }
