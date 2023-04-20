@@ -140,6 +140,16 @@ export default {
       this.activePage = 1
       this.activeCars = doFilter(this.filters)
       this.closeMobileFilter()
+    },
+    clearFilters() {
+      this.filters.name.value = ''
+      this.filters.make.value = []
+      this.filters.model.value = []
+      this.filters.bodyType.value = []
+      this.filters.transmission.value = []
+      this.filters.price.value = getRangeStartValue('price')
+      this.filters.year.value = getRangeStartValue('year')
+      this.filters.kilometres.value = getKilometresStartValue()
     }
   },
   mounted() {
@@ -196,7 +206,11 @@ export default {
                 <Icon src="cross-btn" width="24" height="24" class="modal-filters__cross-icon"/>
               </button>
 
-              <div class="cars-catalog__filter-title title-text">Detailed search</div>
+              <div class="cars-catalog__filter-title title-text">
+                <span>Detailed search</span>
+
+                <button @click="clearFilters" class="filter__clear-btn">Clear filters</button>
+              </div>
 
               <div class="filter">
                 <Collapse size="small" title="Make, Model">

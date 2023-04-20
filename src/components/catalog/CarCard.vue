@@ -44,6 +44,7 @@ export default {
     </div>
 
     <div class="car-card__text-wrap">
+      <router-link :to="{name: 'car', params: {id: car.id}}">
       <div class="car-card__text-column">
         <div class="car-card__title title-text">{{ car.name }}</div>
 
@@ -56,6 +57,7 @@ export default {
         <li v-if="car.transmission" class="car-card__info-list-item text"> {{ car.transmission }}</li>
         <li v-if="car.kilometres" class="car-card__info-list-item text"> {{ car.kilometres }} kilometres</li>
       </ul>
+      </router-link>
     </div>
   </div>
 </template>

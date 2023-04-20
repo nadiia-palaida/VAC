@@ -5,7 +5,7 @@ const SORT_BY_LOWEST = 'lowest price'
 const SORT_BY_HIGHEST = 'highest prices'
 const SORT_BY_RECOMMENDATIONS = 'recommendations'
 
-const carItems = [
+export const carItems = [
     {
         id: 1,
         name: 'Tesla Model 3 Performance',

@@ -122,6 +122,12 @@
   position: relative;
 }
 
+.cars-catalog__share-search {
+  svg {
+    color: $primary-content;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .cars-catalog__filter {
     display: flex;
@@ -196,6 +202,10 @@
   .cars-catalog__header-filter-wrap {
     width: unset;
   }
+
+  .modal-filters__cross-second {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -258,7 +268,10 @@
   }
 
   .cars-catalog__filter-title {
-    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
   }
 
   .modal-filters__cross-second {
