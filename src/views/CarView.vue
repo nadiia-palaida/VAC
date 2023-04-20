@@ -4,11 +4,11 @@ import Icon from "../components/Icon.vue";
 import ShareButton from "../components/form/ShareButton.vue";
 import {mapActions} from "pinia";
 import {useModalStore} from "../store/modal";
-import CalculatorSection from "../components/CalculatorSection.vue";
+import Calculator from '../components/Calculator.vue';
 
 export default {
   name: "CarView",
-  components: {CalculatorSection, ShareButton, Icon},
+  components: {Calculator, ShareButton, Icon},
   data() {
     return {
       showImagesInterior: false
@@ -58,7 +58,7 @@ export default {
               <swiper-container :loop="true" thumbs-swiper=".mySwiper2"
                                 :navigation="{nextEl: '.car-info__carousel-btn-next', prevEl: '.car-info__carousel-btn-prev'}"
                                 class="car-page-info__carousel-swiper">
-                <swiper-slide v-for="img in sliderImages" class="reviews__carousel-swiper-slide">
+                <swiper-slide v-for="img in sliderImages" class="car-page-info__carousel-swiper-slide">
                   <div class="car-page-info__main-carousel-img-wrap">
                     <img :src="getImgFileUrl(img)" alt="Car" class="car-page-info__main-carousel-img">
                   </div>
@@ -86,7 +86,7 @@ export default {
             <div class="car-page-info__carousel-swiper2-wrap">
               <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
                                 centeredSlides="true" watch-slides-progress="true">
-                <swiper-slide v-for="img in sliderImages" class="reviews__carousel-swiper-slide">
+                <swiper-slide v-for="img in sliderImages" class="car-page-info__carousel2-swiper-slide">
                   <div class="car-page-info__main-carousel2-img-wrap">
                     <img :src="getImgFileUrl(img)" alt="Car" class="car-page-info__main-carousel-img">
                   </div>
@@ -158,6 +158,12 @@ export default {
       </div>
     </section>
 
-    <CalculatorSection/>
+    <section class="section">
+      <div class="container">
+        <div class="car-page__calculator-title title-2">Calculate the installment plan for this car.</div>
+
+        <Calculator :new-price="this.car.price" buttonTitle="apply for this vehicle"/>
+      </div>
+    </section>
   </div>
 </template>
