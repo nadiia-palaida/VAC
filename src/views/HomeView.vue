@@ -8,11 +8,14 @@ import HappyCustomers from "../components/home/HappyCustomers.vue";
 import Reviews from "../components/Reviews.vue";
 import CalculatorSection from "../components/CalculatorSection.vue";
 import InterestingRead from "../components/InterestingRead.vue";
+import {mapActions, mapWritableState} from "pinia";
+import {useGeneralStore} from "../store/general";
 
 export default {
   components: {
     InterestingRead,
-    CalculatorSection, Reviews, HappyCustomers, ChooseVehicle, Advantages, Steps, HowWork, MainHome},
+    CalculatorSection, Reviews, HappyCustomers, ChooseVehicle, Advantages, Steps, HowWork, MainHome
+  },
   data() {
     return {
       reviews: [
@@ -70,7 +73,7 @@ export default {
         },
       ],
     }
-  }
+  },
 }
 </script>
 

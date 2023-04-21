@@ -1,9 +1,13 @@
 <script>
-import {mapActions} from "pinia";
+import {mapActions, mapState} from "pinia";
 import {useModalStore} from "../store/modal";
+import {useGeneralStore} from "../store/general";
 
 export default {
   name: "Header",
+  computed: {
+    ...mapState(useGeneralStore, ['headerRequestBtnTitle'])
+  },
   methods: {
     ...mapActions(useModalStore, ['openModal']),
   }
@@ -28,7 +32,10 @@ export default {
           <router-link :to="{name: 'catalog'}" class="header__btn-inventory btn btn_liner btn_bordered">Inventory
           </router-link>
 
-          <router-link :to="{name: 'quiz'}" class="header__btn-request btn btn_solid">Request a car</router-link>
+          <router-link :to="{name: 'quiz'}" class="header__btn-request btn btn_solid"
+                       :class="{'header__btn-request_vehicle': headerRequestBtnTitle}">
+            {{ headerRequestBtnTitle || 'Request a car' }}
+          </router-link>
 
           <button @click.stop.prevent="openModal({component: 'MenuModal'})" class="menu-btn">
             <span class="menu-btn__line"></span>

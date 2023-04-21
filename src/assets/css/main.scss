@@ -15,6 +15,7 @@
 @import "components/pagination";
 @import "components/collapse";
 @import "components/filter";
+@import "components/preloader";
 
 @import "components/form/input";
 @import "components/form/search-input";
@@ -55,4 +56,5 @@
 @import "views/article";
 @import "views/catalog";
 @import "views/car";
+@import "views/not-found";
 

@@ -19,42 +19,42 @@ export default {
       interestingArticles: [
         {
           id: 1,
-          img: 'blog/1.jpeg',
+          img: 'blog/1.jpg',
           title: 'How to save on buying a car? Why is it better to buy from us',
           text: 'lorem ipsum',
           date: '10 May, 2020'
         },
         {
           id: 2,
-          img: 'blog/2.jpeg',
+          img: 'blog/2.jpg',
           title: 'How fast can you order a car in Canada?',
           text: 'lorem ipsum',
           date: '10 May, 2020'
         },
         {
           id: 3,
-          img: 'blog/3.jpeg',
+          img: 'blog/3.jpg',
           title: 'How to save on buying a car? Why is it better to buy from us',
           text: 'lorem ipsum',
           date: '10 May, 2020'
         },
         {
           id: 1,
-          img: 'blog/1.jpeg',
+          img: 'blog/1.jpg',
           title: 'How to save on buying a car? Why is it better to buy from us',
           text: 'lorem ipsum',
           date: '10 May, 2020'
         },
         {
           id: 2,
-          img: 'blog/2.jpeg',
+          img: 'blog/2.jpg',
           title: 'How fast can you order a car in Canada?',
           text: 'lorem ipsum',
           date: '10 May, 2020'
         },
         {
           id: 3,
-          img: 'blog/3.jpeg',
+          img: 'blog/3.jpg',
           title: 'How to save on buying a car? Why is it better to buy from us',
           text: 'lorem ipsum',
           date: '10 May, 2020'

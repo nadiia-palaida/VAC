@@ -33,7 +33,7 @@ async function onSubmit() {
 }
 
 onMounted(() => {
-  if(modalData && modalData.value.name) {
+  if(modalData.value && modalData.value.name) {
     userData.vehicle = modalData.value.name
   }
 })

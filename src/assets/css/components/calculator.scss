@@ -4,6 +4,10 @@
   grid-gap: 0 30px;
 }
 
+.calculator_small {
+  grid-template-columns: 6fr 4.5fr;
+}
+
 .calculator__block {
   padding: 60px;
   box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1);

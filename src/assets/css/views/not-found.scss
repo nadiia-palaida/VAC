@@ -1,0 +1,32 @@
+.not-found-page__icon {
+  width: 89px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.not-found-page__title {
+  margin-bottom: 5px;
+}
+
+.not-found-page__text {
+  margin-bottom: 40px;
+}
+
+.not-found-page__btn {
+  display: inline-flex;
+  min-width: 165px;
+}
+
+.not-found-page__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 767px) {
+  .not-found-page__text {
+    margin-bottom: 30px;
+  }
+}

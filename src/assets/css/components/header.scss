@@ -6,6 +6,7 @@
   width: 100%;
   background: #fff;
   z-index: 100;
+  border-bottom: 1px solid #D7D7D7;
 }
 
 .header__content {
@@ -49,6 +50,10 @@
   margin-right: 63px;
 }
 
+.header__btn-request_vehicle {
+  min-width: 243px;
+}
+
 @media screen and (max-width: 991px) {
   .header__btn-request {
     min-width: 178px;
@@ -73,5 +78,9 @@
   .menu-btn__line {
     width: 30px;
     margin-bottom: 8px;
+  }
+
+  .header__btn-request_vehicle {
+    display: none;
   }
 }

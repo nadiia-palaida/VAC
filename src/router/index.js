@@ -71,7 +71,29 @@ const router = createRouter({
       name: 'loan-rates',
       component: () => import('../views/LoanRates.vue')
     },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('../views/NotFoundView.vue')
+    },
   ]
+})
+
+let eventStartLoading = new Event("startLoading");
+let eventFinishLoading = new Event("finishLoading");
+
+router.beforeResolve((to, from, next) => {
+  // If this isn't an initial page load.
+  if (to.name) {
+    // Start the route progress bar.
+    window.dispatchEvent(eventStartLoading)
+  }
+  next()
+})
+
+router.afterEach((to, from) => {
+  // Complete the animation of the route progress bar.
+  window.dispatchEvent(eventFinishLoading)
 })
 
 export default router

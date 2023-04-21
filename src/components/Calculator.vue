@@ -12,12 +12,15 @@ const TYPE_POOR = 'poor'
 const TYPE_AVERAGE = 'average'
 const TYPE_GOOD = 'good'
 
+const SIZE_TYPE_SMALL = 'small'
+
 export default {
   name: "Calculator",
   components: {Tabs, Slider},
   props: {
     newPrice: {type: Number},
-    buttonTitle: {type: String}
+    buttonTitle: {type: String},
+    size: {type: String}
   },
   data() {
     return {
@@ -53,6 +56,11 @@ export default {
     },
     biWeeklyPayment() {
       return (this.weeklyPayment * 2).toFixed(0)
+    },
+    classes() {
+      return {
+        'calculator_small': this.size === SIZE_TYPE_SMALL
+      }
     }
   },
   mounted() {
@@ -76,7 +84,7 @@ export default {
 </script>
 
 <template>
-  <div class="calculator">
+  <div class="calculator" :class="classes">
     <div class="calculator__block">
       <div class="calculator__type__tabs">
         <Tabs :tabs-list="tabsTypesList" v-model="activeType"/>

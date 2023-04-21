@@ -6,7 +6,7 @@ export const articles = [
         items: [
             {
                 id: 1,
-                img: 'blog/1/1.jpeg',
+                img: 'blog/1/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -37,7 +37,7 @@ export const articles = [
             },
             {
                 id: 2,
-                img: 'blog/2/1.jpeg',
+                img: 'blog/2/1.jpg',
                 title: 'How fast can you order a car in Canada?',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -64,8 +64,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/2/2.jpeg',
-                            'blog/2/3.jpeg',
+                            'blog/2/2.jpg',
+                            'blog/2/3.jpg',
                         ]
                     },
                     {
@@ -81,7 +81,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/2/4.jpeg',
+                        image: 'blog/2/4.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -123,7 +123,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/2/5.jpeg',
+                        image: 'blog/2/5.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -142,7 +142,7 @@ export const articles = [
             },
             {
                 id: 3,
-                img: 'blog/3/1.jpeg',
+                img: 'blog/3/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -171,7 +171,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/3/4.jpeg',
+                        image: 'blog/3/4.jpg',
                     },
                     {
                         type: 'subtitle',
@@ -188,7 +188,7 @@ export const articles = [
             },
             {
                 id: 4,
-                img: 'blog/4/1.jpeg',
+                img: 'blog/4/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -215,8 +215,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/4/2.jpeg',
-                            'blog/4/3.jpeg',
+                            'blog/4/2.jpg',
+                            'blog/4/3.jpg',
                         ]
                     },
                     {
@@ -250,8 +250,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/4/2.jpeg',
-                            'blog/4/3.jpeg',
+                            'blog/4/2.jpg',
+                            'blog/4/3.jpg',
                         ]
                     },
                     {
@@ -262,13 +262,13 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/4/5.jpeg',
+                        image: 'blog/4/5.jpg',
                     }
                 ]
             },
             {
                 id: 5,
-                img: 'blog/5/1.jpeg',
+                img: 'blog/5/1.jpg',
                 title: 'How fast can you order a car in Canada?',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -288,8 +288,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/5/2.jpeg',
-                            'blog/5/3.jpeg',
+                            'blog/5/2.jpg',
+                            'blog/5/3.jpg',
                         ]
                     },
                     {
@@ -305,7 +305,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/5/4.jpeg',
+                        image: 'blog/5/4.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -327,7 +327,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/5/5.jpeg',
+                        image: 'blog/5/5.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -346,7 +346,7 @@ export const articles = [
             },
             {
                 id: 6,
-                img: 'blog/6/1.jpeg',
+                img: 'blog/6/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -354,7 +354,7 @@ export const articles = [
                 sections: [
                     {
                         type: 'image',
-                        image: 'blog/6/5.jpeg',
+                        image: 'blog/6/5.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -387,8 +387,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/6/2.jpeg',
-                            'blog/6/3.jpeg',
+                            'blog/6/2.jpg',
+                            'blog/6/3.jpg',
                         ]
                     },
                     {
@@ -399,13 +399,13 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/6/5.jpeg',
+                        image: 'blog/6/5.jpg',
                     }
                 ]
             },
             {
                 id: 7,
-                img: 'blog/7/1.jpeg',
+                img: 'blog/7/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -453,15 +453,15 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/7/2.jpeg',
-                            'blog/7/3.jpeg',
+                            'blog/7/2.jpg',
+                            'blog/7/3.jpg',
                         ]
                     },
                 ]
             },
             {
                 id: 8,
-                img: 'blog/8/1.jpeg',
+                img: 'blog/8/1.jpg',
                 title: 'How fast can you order a car in Canada?',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -488,13 +488,13 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/8/2.jpeg',
-                            'blog/8/3.jpeg',
+                            'blog/8/2.jpg',
+                            'blog/8/3.jpg',
                         ]
                     },
                     {
                         type: 'image',
-                        image: 'blog/8/4.jpeg',
+                        image: 'blog/8/4.jpg',
                     },
                     {
                         type: 'subtitle',
@@ -556,7 +556,7 @@ export const articles = [
             },
             {
                 id: 9,
-                img: 'blog/9/1.jpeg',
+                img: 'blog/9/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -579,8 +579,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/9/2.jpeg',
-                            'blog/9/3.jpeg',
+                            'blog/9/2.jpg',
+                            'blog/9/3.jpg',
                         ]
                     },
                     {
@@ -592,7 +592,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/9/4.jpeg',
+                        image: 'blog/9/4.jpg',
                     },
                     {
                         type: 'subtitle',
@@ -616,7 +616,7 @@ export const articles = [
         items: [
             {
                 id: 10,
-                img: 'blog/5/1.jpeg',
+                img: 'blog/5/1.jpg',
                 title: 'How fast can you order a car in Canada?',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -636,8 +636,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/5/2.jpeg',
-                            'blog/5/3.jpeg',
+                            'blog/5/2.jpg',
+                            'blog/5/3.jpg',
                         ]
                     },
                     {
@@ -653,7 +653,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/5/4.jpeg',
+                        image: 'blog/5/4.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -675,7 +675,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/5/5.jpeg',
+                        image: 'blog/5/5.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -694,7 +694,7 @@ export const articles = [
             },
             {
                 id: 11,
-                img: 'blog/1/1.jpeg',
+                img: 'blog/1/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -725,7 +725,7 @@ export const articles = [
             },
             {
                 id: 12,
-                img: 'blog/7/1.jpeg',
+                img: 'blog/7/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -773,15 +773,15 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/7/2.jpeg',
-                            'blog/7/3.jpeg',
+                            'blog/7/2.jpg',
+                            'blog/7/3.jpg',
                         ]
                     },
                 ]
             },
             {
                 id: 13,
-                img: 'blog/2/1.jpeg',
+                img: 'blog/2/1.jpg',
                 title: 'How fast can you order a car in Canada?',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -808,8 +808,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/2/2.jpeg',
-                            'blog/2/3.jpeg',
+                            'blog/2/2.jpg',
+                            'blog/2/3.jpg',
                         ]
                     },
                     {
@@ -825,7 +825,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/2/4.jpeg',
+                        image: 'blog/2/4.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -867,7 +867,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/2/5.jpeg',
+                        image: 'blog/2/5.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -886,7 +886,7 @@ export const articles = [
             },
             {
                 id: 14,
-                img: 'blog/8/1.jpeg',
+                img: 'blog/8/1.jpg',
                 title: 'How fast can you order a car in Canada?',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -913,13 +913,13 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/8/2.jpeg',
-                            'blog/8/3.jpeg',
+                            'blog/8/2.jpg',
+                            'blog/8/3.jpg',
                         ]
                     },
                     {
                         type: 'image',
-                        image: 'blog/8/4.jpeg',
+                        image: 'blog/8/4.jpg',
                     },
                     {
                         type: 'subtitle',
@@ -981,7 +981,7 @@ export const articles = [
             },
             {
                 id: 15,
-                img: 'blog/3/1.jpeg',
+                img: 'blog/3/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1010,7 +1010,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/3/4.jpeg',
+                        image: 'blog/3/4.jpg',
                     },
                     {
                         type: 'subtitle',
@@ -1027,7 +1027,7 @@ export const articles = [
             },
             {
                 id: 16,
-                img: 'blog/4/1.jpeg',
+                img: 'blog/4/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1054,8 +1054,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/4/2.jpeg',
-                            'blog/4/3.jpeg',
+                            'blog/4/2.jpg',
+                            'blog/4/3.jpg',
                         ]
                     },
                     {
@@ -1089,8 +1089,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/4/2.jpeg',
-                            'blog/4/3.jpeg',
+                            'blog/4/2.jpg',
+                            'blog/4/3.jpg',
                         ]
                     },
                     {
@@ -1101,13 +1101,13 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/4/5.jpeg',
+                        image: 'blog/4/5.jpg',
                     }
                 ]
             },
             {
                 id: 17,
-                img: 'blog/9/1.jpeg',
+                img: 'blog/9/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1130,8 +1130,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/9/2.jpeg',
-                            'blog/9/3.jpeg',
+                            'blog/9/2.jpg',
+                            'blog/9/3.jpg',
                         ]
                     },
                     {
@@ -1143,7 +1143,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/9/4.jpeg',
+                        image: 'blog/9/4.jpg',
                     },
                     {
                         type: 'subtitle',
@@ -1160,7 +1160,7 @@ export const articles = [
             },
             {
                 id: 18,
-                img: 'blog/6/1.jpeg',
+                img: 'blog/6/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1168,7 +1168,7 @@ export const articles = [
                 sections: [
                     {
                         type: 'image',
-                        image: 'blog/6/5.jpeg',
+                        image: 'blog/6/5.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -1201,8 +1201,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/6/2.jpeg',
-                            'blog/6/3.jpeg',
+                            'blog/6/2.jpg',
+                            'blog/6/3.jpg',
                         ]
                     },
                     {
@@ -1213,7 +1213,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/6/5.jpeg',
+                        image: 'blog/6/5.jpg',
                     }
                 ]
             },
@@ -1226,7 +1226,7 @@ export const articles = [
         items: [
             {
                 id: 19,
-                img: 'blog/8/1.jpeg',
+                img: 'blog/8/1.jpg',
                 title: 'How fast can you order a car in Canada?',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1253,13 +1253,13 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/8/2.jpeg',
-                            'blog/8/3.jpeg',
+                            'blog/8/2.jpg',
+                            'blog/8/3.jpg',
                         ]
                     },
                     {
                         type: 'image',
-                        image: 'blog/8/4.jpeg',
+                        image: 'blog/8/4.jpg',
                     },
                     {
                         type: 'subtitle',
@@ -1321,7 +1321,7 @@ export const articles = [
             },
             {
                 id: 20,
-                img: 'blog/1/1.jpeg',
+                img: 'blog/1/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1352,7 +1352,7 @@ export const articles = [
             },
             {
                 id: 21,
-                img: 'blog/3/1.jpeg',
+                img: 'blog/3/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1381,7 +1381,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/3/4.jpeg',
+                        image: 'blog/3/4.jpg',
                     },
                     {
                         type: 'subtitle',
@@ -1398,7 +1398,7 @@ export const articles = [
             },
             {
                 id: 22,
-                img: 'blog/6/1.jpeg',
+                img: 'blog/6/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1406,7 +1406,7 @@ export const articles = [
                 sections: [
                     {
                         type: 'image',
-                        image: 'blog/6/5.jpeg',
+                        image: 'blog/6/5.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -1439,8 +1439,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/6/2.jpeg',
-                            'blog/6/3.jpeg',
+                            'blog/6/2.jpg',
+                            'blog/6/3.jpg',
                         ]
                     },
                     {
@@ -1451,13 +1451,13 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/6/5.jpeg',
+                        image: 'blog/6/5.jpg',
                     }
                 ]
             },
             {
                 id: 23,
-                img: 'blog/7/1.jpeg',
+                img: 'blog/7/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1505,15 +1505,15 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/7/2.jpeg',
-                            'blog/7/3.jpeg',
+                            'blog/7/2.jpg',
+                            'blog/7/3.jpg',
                         ]
                     },
                 ]
             },
             {
                 id: 24,
-                img: 'blog/5/1.jpeg',
+                img: 'blog/5/1.jpg',
                 title: 'How fast can you order a car in Canada?',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1533,8 +1533,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/5/2.jpeg',
-                            'blog/5/3.jpeg',
+                            'blog/5/2.jpg',
+                            'blog/5/3.jpg',
                         ]
                     },
                     {
@@ -1550,7 +1550,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/5/4.jpeg',
+                        image: 'blog/5/4.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -1572,7 +1572,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/5/5.jpeg',
+                        image: 'blog/5/5.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -1591,7 +1591,7 @@ export const articles = [
             },
             {
                 id: 25,
-                img: 'blog/9/1.jpeg',
+                img: 'blog/9/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1614,8 +1614,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/9/2.jpeg',
-                            'blog/9/3.jpeg',
+                            'blog/9/2.jpg',
+                            'blog/9/3.jpg',
                         ]
                     },
                     {
@@ -1627,7 +1627,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/9/4.jpeg',
+                        image: 'blog/9/4.jpg',
                     },
                     {
                         type: 'subtitle',
@@ -1644,7 +1644,7 @@ export const articles = [
             },
             {
                 id: 26,
-                img: 'blog/2/1.jpeg',
+                img: 'blog/2/1.jpg',
                 title: 'How fast can you order a car in Canada?',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1671,8 +1671,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/2/2.jpeg',
-                            'blog/2/3.jpeg',
+                            'blog/2/2.jpg',
+                            'blog/2/3.jpg',
                         ]
                     },
                     {
@@ -1688,7 +1688,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/2/4.jpeg',
+                        image: 'blog/2/4.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -1730,7 +1730,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/2/5.jpeg',
+                        image: 'blog/2/5.jpg',
                     },
                     {
                         type: 'paragraph',
@@ -1749,7 +1749,7 @@ export const articles = [
             },
             {
                 id: 27,
-                img: 'blog/4/1.jpeg',
+                img: 'blog/4/1.jpg',
                 title: 'How to save on buying a car? Why is it better to buy from us',
                 text: 'lorem ipsum',
                 date: '10 May, 2020',
@@ -1776,8 +1776,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/4/2.jpeg',
-                            'blog/4/3.jpeg',
+                            'blog/4/2.jpg',
+                            'blog/4/3.jpg',
                         ]
                     },
                     {
@@ -1811,8 +1811,8 @@ export const articles = [
                     {
                         type: 'images',
                         images: [
-                            'blog/4/2.jpeg',
-                            'blog/4/3.jpeg',
+                            'blog/4/2.jpg',
+                            'blog/4/3.jpg',
                         ]
                     },
                     {
@@ -1823,7 +1823,7 @@ export const articles = [
                     },
                     {
                         type: 'image',
-                        image: 'blog/4/5.jpeg',
+                        image: 'blog/4/5.jpg',
                     }
                 ]
             },
