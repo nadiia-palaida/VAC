@@ -11,16 +11,18 @@ const props = defineProps({
   name: {type: String, required: true},
   icon: {type: String},
   modelValue: {required: true},
-  rules: {}
+  rules: {},
+  validateOnValueUpdate: {type: Boolean, default: true},
+  autocomplete: {type: String, default: 'on'}
 })
 
-const { errorMessage, value } = useField(() => props.name, props.rules);
+const { errorMessage, value } = useField(() => props.name, props.rules, {validateOnValueUpdate: props.validateOnValueUpdate});
 </script>
 
 <template>
   <div class="input" :class="{input_error: errorMessage, input_icon: icon}">
     <div class="input__wrap">
-      <input :value="modelValue" :name="name" :type="type" :placeholder="placeholder"
+      <input :value="modelValue" :name="name" :type="type" :placeholder="placeholder" :autocomplete="autocomplete"
              @input="$emit('update:modelValue', $event.target.value)" class="input__item">
       <Icon v-if="icon" :src="icon" class="input__icon"/>
     </div>

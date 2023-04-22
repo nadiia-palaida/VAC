@@ -1,4 +1,4 @@
-const quizTree = [
+export const quizTree = [
     {
         id: 'budget',
         name: 'budget',
@@ -11,7 +11,7 @@ const quizTree = [
             {label: 'Over $500/Month', value: 'Over $500/Month'},
         ],
         next: 'employment_status',
-        type: 'radio'
+        type: 'radio',
     },
     {
         id: 'employment_status',
@@ -23,7 +23,7 @@ const quizTree = [
             {label: 'Self-Employed', value: 'Self-Employed', next: 'monthly_income_1'},
             {label: 'Student', value: 'Student', next: 'is_working'},
             {label: 'Retired / Pension', value: 'Retired / Pension', next: 'monthly_income_2'},
-            {label: 'Other', value: 'Other'},
+            {label: 'Other', value: 'Other', next: 'how_earn'},
         ],
         next: '',
         type: 'radio'
@@ -34,7 +34,7 @@ const quizTree = [
         title: 'Enter your monthly income',
         subtitle: 'Your income details help us make sure your vehicle payments are easy and affordable. Before taxes and deductions.',
         values: [
-            {name: 'monthly_income', placeholder: 'Monthly income', type: 'number'},
+            {name: 'monthly_income', placeholder: 'Monthly income', type: 'number', rules: {required: true, numeric: true}},
         ],
         next: 'employment',
         type: 'input'
@@ -45,7 +45,7 @@ const quizTree = [
         title: 'Enter your monthly income',
         subtitle: 'Your income details help us make sure your vehicle payments are easy and affordable. Before taxes and deductions.',
         values: [
-            {name: 'monthly_income', placeholder: 'Monthly income', type: 'number'},
+            {name: 'monthly_income', placeholder: 'Monthly income', type: 'number', rules: {required: true, numeric: true}},
         ],
         next: 'is_working_2',
         type: 'input'
@@ -56,7 +56,7 @@ const quizTree = [
         title: 'Enter your monthly income',
         subtitle: 'Your income details help us make sure your vehicle payments are easy and affordable. Before taxes and deductions.',
         values: [
-            {name: 'monthly_income', placeholder: 'Monthly income', type: 'number'},
+            {name: 'monthly_income', placeholder: 'Monthly income', type: 'number', rules: {required: true, numeric: true}},
         ],
         next: 'how_long_receiving',
         type: 'input'
@@ -109,8 +109,8 @@ const quizTree = [
         title: 'Tell us about your employment',
         subtitle: 'We won’t come visit but we need these details to confirm your employment status so you can get the best rates possible.',
         values: [
-            {name: 'employer', placeholder: 'Employer', type: 'text'},
-            {name: 'title', placeholder: 'Title', type: 'text'},
+            {name: 'employer', placeholder: 'Employer', type: 'text', rules: {required: true}},
+            {name: 'title', placeholder: 'Title', type: 'text', rules: {required: true}},
         ],
         next: 'how_long_have_been',
         type: 'input'
@@ -121,8 +121,8 @@ const quizTree = [
         title: 'How long have you been earning this income?',
         subtitle: 'Your income details help us make sure your vehicle payments are easy and affordable.',
         values: [
-            {name: 'long-years', placeholder: 'Years', type: 'number'},
-            {name: 'long-months', placeholder: 'Months', type: 'number'},
+            {name: 'long_years', placeholder: 'Years', type: 'number', rules: {required: true, numeric: true}},
+            {name: 'long_months', placeholder: 'Months', type: 'number', rules: {required: true, numeric: true}},
         ],
         next: 'how_long_receiving',
         type: 'input'
@@ -133,7 +133,7 @@ const quizTree = [
         title: 'How long receiving?',
         subtitle: 'Your income details help us make sure your vehicle payments are easy and affordable.',
         values: [
-            {name: 'long-time', placeholder: 'Time', type: 'number'},
+            {name: 'long_time', placeholder: 'Time', type: 'text', rules: {required: true}},
         ],
         next: 'address',
         type: 'input'
@@ -144,10 +144,10 @@ const quizTree = [
         title: 'Where do you live?',
         subtitle: 'Providing your location helps find the best deals near you.',
         values: [
-            {name: 'street-address', placeholder: 'Street address', type: 'text'},
-            {name: 'city-address', placeholder: 'City', type: 'text'},
-            {name: 'province-address', placeholder: 'Province', type: 'text'},
-            {name: 'postal-code-address', placeholder: 'Postal code', type: 'number'},
+            {name: 'street_address', placeholder: 'Street address', type: 'text', rules: {required: true}},
+            {name: 'city_address', placeholder: 'City', type: 'text', rules: {required: true}},
+            {name: 'province_address', placeholder: 'Province', type: 'text', rules: {required: true}},
+            {name: 'postal_code_address', placeholder: 'Postal code', type: 'number', rules: {required: true, numeric: true}},
         ],
         next: 'born_date',
         type: 'input'
@@ -158,11 +158,11 @@ const quizTree = [
         title: 'When were you born?',
         subtitle: '',
         values: [
-            {name: 'born-year', placeholder: 'Year', type: 'number'},
-            {name: 'born-month', placeholder: 'Month', type: 'number'},
-            {name: 'born-day', placeholder: 'Day', type: 'number'},
+            {name: 'born_year', placeholder: 'Year', type: 'number', rules: {required: true, digits: 4}},
+            {name: 'born_month', placeholder: 'Month', type: 'number',  rules: {required: true, digits: 2, min_value: 1, max_value: 12}},
+            {name: 'born_day', placeholder: 'Day', type: 'number', rules: {required: true, numeric: true, min_value: 1, max_value: 31}},
         ],
-        next: '',
+        next: 'user_info',
         type: 'input'
     },
     {
@@ -171,10 +171,10 @@ const quizTree = [
         title: 'Congratulations! Last step.',
         subtitle: 'Get access to your vehicle and financing options by creating your account. There is no obligation to continue with financing if you change your mind. ',
         values: [
-            {name: 'first-name', placeholder: 'First name', type: 'text'},
-            {name: 'last-name', placeholder: 'Last name', type: 'text'},
-            {name: 'email', placeholder: 'Email', type: 'email'},
-            {name: 'phone', placeholder: 'Phone number', type: 'phone'},
+            {name: 'first-name', placeholder: 'First name', type: 'text', rules: {required: true}},
+            {name: 'last-name', placeholder: 'Last name', type: 'text', rules: {required: true}},
+            {name: 'email', placeholder: 'Email', type: 'email', rules: {required: true, email: true}},
+            {name: 'phone', placeholder: 'Phone number', type: 'phone', rules: {required: true, digits: 10}},
         ],
         next: '',
         type: 'input'

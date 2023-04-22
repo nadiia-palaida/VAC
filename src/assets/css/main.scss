@@ -22,6 +22,7 @@
 @import "components/form/share-btn";
 @import "components/form/checkbox";
 @import "components/form/select";
+@import "components/form/radio";
 
 @import "components/modals/contacts-modal";
 @import "components/modals/menu-modal";
@@ -50,6 +51,8 @@
 @import "components/catalog/car-card";
 @import "components/catalog/filter-not-found";
 
+@import "components/quiz/quiz-form";
+
 @import "views/calculator-view";
 @import "views/terms";
 @import "views/blog";
@@ -57,4 +60,5 @@
 @import "views/catalog";
 @import "views/car";
 @import "views/not-found";
+@import "views/quiz";
 
