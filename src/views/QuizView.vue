@@ -11,7 +11,7 @@ export default {
       historyQuiz: [],
 
       quizData: {
-        budget: null,
+        /*budget: null,
         employment_status: null,
         monthly_income: {
           monthly_income: ''
@@ -40,7 +40,7 @@ export default {
           born_month: '',
           born_day: ''
         },
-        user_info: null
+        user_info: null*/
       }
     }
   },
@@ -94,6 +94,9 @@ export default {
 <template>
   <section class="quiz-section">
     <div class="container">
+      <pre>quizData: {{ quizData }}</pre>
+      <pre>historyQuiz: {{ historyQuiz }}</pre>
+
       <div class="quiz__content">
         <div v-if="activeQuizItem" class="quiz__form-wrap">
           <QuizForm :quiz="activeQuizItem" :previousQuiz="previousQuiz" :activeValueData="quizData[activeQuizItem.name]"
