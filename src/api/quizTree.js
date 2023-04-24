@@ -26,7 +26,7 @@ export const quizTree = [
             {label: 'Other', value: 'Other', next: 'how_earn'},
         ],
         next: '',
-        type: 'radio'
+        type: 'radio',
     },
     {
         id: 'monthly_income_1',
@@ -71,7 +71,7 @@ export const quizTree = [
             {label: 'No', value: 'No', next: 'how_long_have_been'},
         ],
         next: '',
-        type: 'radio'
+        type: 'radio',
     },
     {
         id: 'is_working_2',
@@ -101,7 +101,7 @@ export const quizTree = [
             {label: 'Other / Not listed', value: 'Other / Not listed'},
         ],
         next: 'monthly_income_3',
-        type: 'radio'
+        type: 'radio',
     },
     {
         id: 'employment',
@@ -159,7 +159,7 @@ export const quizTree = [
         subtitle: '',
         values: [
             {name: 'born_year', placeholder: 'Year', type: 'number', rules: {required: true, digits: 4}},
-            {name: 'born_month', placeholder: 'Month', type: 'number',  rules: {required: true, digits: 2, min_value: 1, max_value: 12}},
+            {name: 'born_month', placeholder: 'Month', type: 'number',  rules: {required: true, numeric: true, min_value: 1, max_value: 12}},
             {name: 'born_day', placeholder: 'Day', type: 'number', rules: {required: true, numeric: true, min_value: 1, max_value: 31}},
         ],
         next: 'user_info',
@@ -177,6 +177,7 @@ export const quizTree = [
             {name: 'phone', placeholder: 'Phone number', type: 'phone', rules: {required: true, digits: 10}},
         ],
         next: '',
-        type: 'input'
+        type: 'input',
+        lastStep: true
     },
 ]

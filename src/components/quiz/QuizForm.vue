@@ -1,7 +1,7 @@
 <script setup>
 import RadioComponent from "../form/RadioComponent.vue";
 import '@/plugins/vee-validate'
-import {onMounted, onUpdated, reactive, ref} from "vue";
+import {onMounted, onUpdated, reactive, ref, watch} from "vue";
 import {useIsFormValid, useValidateForm, Form} from "vee-validate";
 import Icon from "../Icon.vue";
 import InputComponent from "../form/InputComponent.vue";
@@ -19,7 +19,7 @@ const props = defineProps({
 })
 
 const activeValue = ref(null)
-const activeValueInput = reactive({})
+let activeValueInput = reactive({})
 
 function updateValue() {
     if (props.quiz.type === FORM_TYPE_RADIO) {
@@ -41,22 +41,28 @@ async function onSubmit() {
   }
 }
 
-onUpdated(() => {
+watch(activeValue, () => {
+
+})
+
+onMounted(() => {
   if (props.activeValueData) {
     if (typeof props.activeValueData === 'object') {
       let isValue = false
 
       for (let key in props.activeValueData) {
-        if (props.activeValueData.key) {
+        if (props.activeValueData[key]) {
           isValue = true
         }
       }
       if (isValue) {
-        activeValue.value = props.activeValueData
+        activeValueInput = props.activeValueData
       }
     } else {
       activeValue.value = props.activeValueData
     }
+  } else {
+    emit('setEmptyValue', null)
   }
 })
 </script>
@@ -80,8 +86,8 @@ onUpdated(() => {
                         :validateOnValueUpdate="false" :key="`input-quiz-${index}`" class="quiz__input"/>
       </div>
 
-      <div class="quiz__btns-wrap">
-        <button type="submit" class="quiz__btn btn btn_solid">Сontinue</button>
+      <div class="quiz__btns-wrap" :class="{'quiz__btns-wrap_one': !previousQuiz}">
+        <button type="submit" class="quiz__btn btn btn_solid quiz__btn-continue">Сontinue</button>
 
         <button v-if="previousQuiz" @click="emit('goBack')" class="quiz__btn quiz__btn-back">
           <Icon src="arrow-back" class="quiz__arrow-back-icon"/>

@@ -54,3 +54,10 @@
 .input__wrap {
   position: relative;
 }
+
+@media screen and (max-width: 767px) {
+  .input__item {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

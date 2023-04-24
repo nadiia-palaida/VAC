@@ -29,6 +29,12 @@
   align-items: center;
 }
 
+.header__buttons-wrap {
+  display: flex;
+  align-items: center;
+  margin-right: 63px;
+}
+
 .menu-btn {
   cursor: pointer;
 }
@@ -44,10 +50,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.header__btn-request {
-  margin-right: 63px;
 }
 
 .header__btn-request_vehicle {
@@ -67,8 +69,11 @@
 
   .header__btn-request {
     min-width: 130px;
-    margin-right: 23px;
     font-size: 14px;
+  }
+
+  .header__buttons-wrap {
+    margin-right: 23px;
   }
 
   .header__btn-inventory {
