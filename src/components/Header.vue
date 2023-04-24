@@ -6,7 +6,7 @@ import {useGeneralStore} from "../store/general";
 export default {
   name: "Header",
   computed: {
-    ...mapState(useGeneralStore, ['headerRequestBtnTitle'])
+    ...mapState(useGeneralStore, ['headerRequestBtnTitle', 'headerRequestCarId'])
   },
   methods: {
     ...mapActions(useModalStore, ['openModal']),
@@ -29,13 +29,15 @@ export default {
 
 
         <div class="header__buttons">
-          <router-link :to="{name: 'catalog'}" class="header__btn-inventory btn btn_liner btn_bordered">Inventory
-          </router-link>
+          <div class="header__buttons-wrap">
+            <router-link v-if="$route.name !== 'catalog'" :to="{name: 'catalog'}" class="header__btn-inventory btn btn_liner btn_bordered">Inventory
+            </router-link>
 
-          <router-link :to="{name: 'quiz'}" class="header__btn-request btn btn_solid"
-                       :class="{'header__btn-request_vehicle': headerRequestBtnTitle}">
-            {{ headerRequestBtnTitle || 'Request a car' }}
-          </router-link>
+            <router-link v-if="$route.name !== 'quiz'" :to="{name: 'quiz', params:{carId: headerRequestCarId}}" class="header__btn-request btn btn_solid"
+                         :class="{'header__btn-request_vehicle': headerRequestBtnTitle}">
+              {{ headerRequestBtnTitle || 'Request a car' }}
+            </router-link>
+          </div>
 
           <button @click.stop.prevent="openModal({component: 'MenuModal'})" class="menu-btn">
             <span class="menu-btn__line"></span>

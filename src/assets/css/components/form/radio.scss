@@ -42,3 +42,13 @@
   position: absolute;
   z-index: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .radio__options {
+    grid-template-columns: 1fr;
+  }
+
+  .radio__options-btn {
+    font-size: 14px;
+  }
+}

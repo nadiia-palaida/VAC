@@ -16,7 +16,7 @@ export default {
     }
   },
   computed: {
-    ...mapWritableState(useGeneralStore, ['headerRequestBtnTitle']),
+    ...mapWritableState(useGeneralStore, ['headerRequestBtnTitle', 'headerRequestCarId']),
     car() {
       return carItems.find(item => item.id === +this.$route.params.id)
     },
@@ -43,6 +43,7 @@ export default {
   },
   mounted() {
     this.headerRequestBtnTitle = 'apply for this vehicle'
+    this.headerRequestCarId = this.$route.params.id
   },
   unmounted() {
     this.headerRequestBtnTitle = ''

@@ -55,7 +55,7 @@ export default {
 
   <Preloader v-show="isLoading"/>
 
-  <Footer v-if="$route.name !== 'not-found'"/>
+  <Footer v-if="$route.name !== 'not-found' && $route.name !== 'quiz'"/>
 </template>
 
 <style>

@@ -4,6 +4,7 @@ import {hideBodyScrollbar, showBodyScrollbar} from "../helpers";
 export const useGeneralStore = defineStore('general', {
     state: () => ({
         headerRequestBtnTitle: '',
+        headerRequestCarId: null,
         isLoading: false
     }),
     actions: {
