@@ -77,7 +77,7 @@ export default {
           return index
         }
       })
-
+''
       return activeIndex
     },
     isLastQuiz(id) {
