@@ -1,3 +1,5 @@
+@import "components/preloader";
+
 @import "fonts";
 @import "variables";
 @import "general";
@@ -15,7 +17,6 @@
 @import "components/pagination";
 @import "components/collapse";
 @import "components/filter";
-@import "components/preloader";
 
 @import "components/form/input";
 @import "components/form/search-input";

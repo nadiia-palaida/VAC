@@ -25,20 +25,32 @@ export default {
   },
   created() {
     window.addEventListener('startLoading', () => {
-      console.log('startLoading')
-      this.showPreloader()
+      document.getElementById('preloader').classList.add('active')
     })
     window.addEventListener('finishLoading', () => {
-      console.log('finishLoading')
-      this.hidePreloader()
+      if(document.readyState === 'complete') {
+        document.getElementById('preloader').classList.remove('active')
+      }
+    })
+  },
+  mounted() {
+    window.addEventListener('load', () => {
+      if(document.readyState === 'complete') {
+        document.getElementById('preloader').classList.remove('active')
+      }
     })
   },
   unmounted() {
+    window.removeEventListener('load', () => {
+      document.getElementById('preloader').classList.remove('active')
+    })
     window.removeEventListener('startLoading', () => {
-      this.showPreloader()
+      document.getElementById('preloader').classList.add('active')
     })
     window.removeEventListener('finishLoading', () => {
-      this.hidePreloader()
+      if(document.readyState === 'complete') {
+        document.getElementById('preloader').classList.remove('active')
+      }
     })
   }
 }
@@ -53,7 +65,7 @@ export default {
 
   <component v-if="modalComponent" :is="modalComponent" class="modal-component"/>
 
-  <Preloader v-show="isLoading"/>
+<!--  <Preloader v-show="isLoading"/>-->
 
   <Footer v-if="$route.name !== 'not-found' && $route.name !== 'quiz'"/>
 </template>

@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Approval Center</title>
-  </head>
+</head>
 
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<style>
+    .preloader {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        min-height: 100vh;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+        opacity: 0;
+        font-family: unset;
+    }
+
+    .preloader__text {
+        font-family: unset;
+    }
+
+    .preloader.active {
+        opacity: 1;
+        z-index: 200;
+    }
+
+    .preloader__content {
+        text-align: center;
+    }
+
+    .preloader__logo-wrap {
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+<div id="app">
+</div>
+
+<div class="preloader active" id="preloader">
+    <div class="preloader__content">
+        <div class="preloader__logo-wrap">
+            <img src="./src/assets/imgs/preloader.svg" alt="logo" class="preloader__logo">
+        </div>
+
+        <div class="preloader__text">
+            Loading ...
+        </div>
+    </div>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
 </html>
