@@ -58,10 +58,16 @@ export default {
           <div class="steps__column">
             <div class="steps__imgs">
               <div class="steps__img-phone steps__img-phone-left">
-                <img src="@/assets/imgs/home/steps/X1.png" alt="phone">
+                <picture>
+                  <source media="(max-width:767px)" srcset="@/assets/imgs/home/steps/X1-mobile.png">
+                  <img src="@/assets/imgs/home/steps/X1.png" alt="Flowers" style="width:auto;">
+                </picture>
               </div>
               <div class="steps__img-phone steps__img-phone-right">
-                <img src="@/assets/imgs/home/steps/X2.png" alt="phone">
+                <picture>
+                  <source media="(max-width:767px)" srcset="@/assets/imgs/home/steps/X2-mobile.png">
+                  <img src="@/assets/imgs/home/steps/X2.png" alt="Flowers" style="width:auto;">
+                </picture>
               </div>
             </div>
           </div>

@@ -8,15 +8,18 @@ export default {
       socials: [
         {
           name: 'Instagram',
-          icon: 'instagram'
+          icon: 'instagram',
+          link: 'https://www.instagram.com/'
         },
         {
           name: 'Facebook',
-          icon: 'facebook'
+          icon: 'facebook',
+          link: 'https://www.facebook.com/'
         },
         {
           name: 'Youtube',
-          icon: 'youtube'
+          icon: 'youtube',
+          link: 'https://www.youtube.com/'
         },
       ]
     }
@@ -46,7 +49,7 @@ export default {
       
       <ul class="footer__social-list">
         <li v-for="social in socials" class="footer__social-list-item">
-          <a href="#" class="footer__social-list-item-link">
+          <a :href="social.link" class="footer__social-list-item-link" :aria-label="social.name">
             <Icon :src="social.icon" :class="`footer__icon-${social.icon}`"/>
           </a>
         </li>

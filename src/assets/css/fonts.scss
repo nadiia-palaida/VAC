@@ -4,6 +4,7 @@
   src: url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
   url('../fonts/Gilroy-Regular.woff') format('woff'),
   url('../fonts/Gilroy-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
   src: url('../fonts/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
   url('../fonts/Gilroy-Semibold.woff') format('woff'),
   url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
@@ -20,6 +22,7 @@
   src: url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
   url('../fonts/Gilroy-Bold.woff') format('woff'),
   url('../fonts/Gilroy-Bold.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
@@ -28,6 +31,7 @@
   src: url('../fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
   url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
   url('../fonts/Gilroy-ExtraBold.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
@@ -36,4 +40,5 @@
   src: url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
   url('../fonts/Gilroy-Medium.woff') format('woff'),
   url('../fonts/Gilroy-Medium.ttf') format('truetype');
+  font-display: swap;
 }

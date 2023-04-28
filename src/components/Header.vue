@@ -39,7 +39,7 @@ export default {
             </router-link>
           </div>
 
-          <button @click.stop.prevent="openModal({component: 'MenuModal'})" class="menu-btn">
+          <button @click.stop.prevent="openModal({component: 'MenuModal'})" class="menu-btn" aria-label="menu burger">
             <span class="menu-btn__line"></span>
             <span class="menu-btn__line"></span>
             <span class="menu-btn__line"></span>

@@ -124,7 +124,7 @@
     position: relative;
     transform: rotate(15deg);
 
-    img {
+    img, picture {
       max-height: 332px;
     }
   }
@@ -190,11 +190,11 @@
     justify-content: center;
   }
 
-  .steps__img-phone {
+/*  .steps__img-phone {
     img {
       max-height: 298px;
     }
-  }
+  }*/
 
   .steps__img-phone-left {
     top: 0px;
